@@ -50,7 +50,7 @@ const Fermenting = () => {
               </p>
               
               <ScienceFact
-                fact="The salt concentration of 2-3% creates a selective environment where beneficial Lactobacillus thrive while harmful bacteria are inhibited. Too little salt allows pathogens; too much kills beneficial bacteria."
+                fact="The salt concentration of 2–3% creates a selective environment where beneficial Lactobacillus thrive while harmful bacteria are inhibited. Too little salt allows pathogens; too much kills beneficial bacteria."
                 source="University of Georgia Extension"
                 sourceUrl="https://nchfp.uga.edu"
               />
@@ -59,6 +59,12 @@ const Fermenting = () => {
                 fact="As fermentation progresses, pH drops from around 6.5 to below 4.6, creating an acidic environment that prevents the growth of pathogenic bacteria including Clostridium botulinum."
                 source="Revolution Fermentation"
                 sourceUrl="https://revolutionfermentation.com"
+              />
+
+              <ScienceFact
+                fact="Health Canada confirms that properly fermented vegetables with a pH below 4.6 are safe for storage. The Canadian Food Inspection Agency recognizes lacto-fermentation as a valid preservation method."
+                source="Health Canada"
+                sourceUrl="https://www.canada.ca/en/health-canada/services/food-safety.html"
               />
             </div>
             
@@ -172,11 +178,11 @@ const Fermenting = () => {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Salt ratio</span>
-                  <span className="font-medium">2% by weight</span>
+                  <span className="font-medium">2% by weight (20 g/kg)</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Temperature</span>
-                  <span className="font-medium">65-75°F (18-24°C)</span>
+                  <span className="font-medium">65–75°F (18–24°C)</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Time</span>
@@ -193,11 +199,11 @@ const Fermenting = () => {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Salt ratio</span>
-                  <span className="font-medium">2-3% by weight</span>
+                  <span className="font-medium">2–3% by weight (20–30 g/kg)</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Temperature</span>
-                  <span className="font-medium">65-75°F (18-24°C)</span>
+                  <span className="font-medium">65–75°F (18–24°C)</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Time</span>
@@ -214,11 +220,11 @@ const Fermenting = () => {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Brine</span>
-                  <span className="font-medium">3.5% salt solution</span>
+                  <span className="font-medium">3.5% salt solution (35 g/L)</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Temperature</span>
-                  <span className="font-medium">68-75°F (20-24°C)</span>
+                  <span className="font-medium">68–75°F (20–24°C)</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Time</span>

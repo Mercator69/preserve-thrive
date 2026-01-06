@@ -10,16 +10,15 @@ const preservationLinks = [
 ];
 
 const resourceLinks = [
-  { name: "DIY Storage", href: "/storage" },
+  { name: "Conversion Tools", href: "/tools" },
   { name: "Equipment Guide", href: "/equipment" },
-  { name: "About Us", href: "/about" },
-  { name: "Safety Guidelines", href: "/safety" },
+  { name: "DIY Storage", href: "/storage" },
 ];
 
 const externalResources = [
   { name: "USDA Food Safety", href: "https://www.fsis.usda.gov/food-safety" },
+  { name: "Health Canada - Food Safety", href: "https://www.canada.ca/en/health-canada/services/food-safety.html" },
   { name: "National Center for Home Food Preservation", href: "https://nchfp.uga.edu" },
-  { name: "Penn State Extension", href: "https://extension.psu.edu" },
 ];
 
 export function Footer() {

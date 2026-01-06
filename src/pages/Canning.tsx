@@ -70,6 +70,12 @@ const Canning = () => {
                 source="Penn State Extension"
                 sourceUrl="https://extension.psu.edu"
               />
+
+              <ScienceFact
+                fact="Health Canada recommends using only tested recipes from trusted sources and adjusting processing times for altitude. Canadian guidelines align with USDA standards for home canning safety."
+                source="Health Canada - Food Safety"
+                sourceUrl="https://www.canada.ca/en/health-canada/services/general-food-safety-tips/home-food-preservation.html"
+              />
             </div>
             
             <div className="bg-card rounded-xl p-6 border">
@@ -117,7 +123,7 @@ const Canning = () => {
               </div>
               <h3 className="font-serif text-2xl font-semibold mb-3">Water Bath Canning</h3>
               <p className="text-muted-foreground mb-6">
-                Uses boiling water (212°F/100°C) to process high-acid foods. The acid 
+                Uses boiling water at 212°F (100°C) to process high-acid foods. The acid 
                 prevents the growth of Clostridium botulinum, making this method safe 
                 for fruits, pickles, and properly acidified tomatoes.
               </p>
@@ -154,7 +160,7 @@ const Canning = () => {
               </div>
               <h3 className="font-serif text-2xl font-semibold mb-3">Pressure Canning</h3>
               <p className="text-muted-foreground mb-6">
-                Creates temperatures of 240-250°F (116-121°C) under pressure, required 
+                Creates temperatures of 240–250°F (116–121°C) under pressure, required 
                 for low-acid foods. This is the ONLY safe method for canning vegetables, 
                 meats, poultry, and seafood.
               </p>
@@ -171,7 +177,7 @@ const Canning = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  Adjust pressure for altitude (add 1 lb per 2,000 ft above sea level)
+                  Adjust pressure for altitude: add 0.5 psi per 1,000 ft (300 m) above sea level, or add 1 lb (0.07 bar) per 2,000 ft (610 m)
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
@@ -234,7 +240,7 @@ const Canning = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AffiliateProductCard
               name="Ball Enamel Water Bath Canner"
-              description="21-quart capacity, includes jar rack. Perfect for beginners and high-acid foods."
+              description="21-quart (20 L) capacity, includes jar rack. Perfect for beginners and high-acid foods."
               image={equipmentImage}
               price="$39.99"
               rating={5}
@@ -243,7 +249,7 @@ const Canning = () => {
             />
             <AffiliateProductCard
               name="Presto 23-Quart Pressure Canner"
-              description="Holds 7 quart jars or 20 pint jars. Dial gauge for precise pressure control."
+              description="Holds 7 quart jars (946 mL each) or 20 pint jars (473 mL each). Dial gauge for precise pressure control."
               image={equipmentImage}
               price="$129.99"
               rating={5}
@@ -251,7 +257,7 @@ const Canning = () => {
             />
             <AffiliateProductCard
               name="Ball Mason Jars (12-Pack)"
-              description="Wide-mouth quart jars with lids and bands. BPA-free lids for safe food preservation."
+              description="Wide-mouth quart jars (946 mL) with lids and bands. BPA-free lids for safe food preservation."
               image={equipmentImage}
               price="$17.99"
               rating={4}
@@ -340,7 +346,7 @@ const Canning = () => {
           
           <p className="text-sm text-muted-foreground mt-6 text-center">
             <strong>Altitude Adjustment:</strong> Add 5 minutes processing time for altitudes 
-            1,001-6,000 feet; add 10 minutes for 6,001+ feet.
+            1,001–6,000 ft (305–1,830 m); add 10 minutes for 6,001+ ft (1,830+ m). Canadian and US guidelines are the same.
           </p>
         </div>
       </section>

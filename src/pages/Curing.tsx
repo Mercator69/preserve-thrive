@@ -76,7 +76,7 @@ const Curing = () => {
               />
               
               <ScienceFact
-                fact="The USDA recommends using 1 oz (28g) of Prague Powder #1 per 25 lbs of meat for wet-curing, or 1 level teaspoon per 5 lbs for dry-curing. Never exceed these amounts."
+                fact="The USDA recommends using 1 oz (28 g) of Prague Powder #1 per 25 lbs (11.3 kg) of meat for wet-curing, or 1 level teaspoon (5.7 g) per 5 lbs (2.3 kg) for dry-curing. Never exceed these amounts."
                 source="USDA Meat Processing Guide"
               />
             </div>
@@ -137,9 +137,9 @@ const Curing = () => {
                 for weeks to months. Used for bacon, pancetta, prosciutto.
               </p>
               <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• Meat loses 25-35% of weight</li>
-                <li>• Requires precise temperature (36-40°F)</li>
-                <li>• Humidity control critical (60-70%)</li>
+                <li>• Meat loses 25–35% of weight</li>
+                <li>• Requires precise temperature: 36–40°F (2–4°C)</li>
+                <li>• Humidity control critical: 60–70%</li>
                 <li>• Results in concentrated flavor</li>
               </ul>
             </div>
@@ -172,7 +172,7 @@ const Curing = () => {
               </p>
               <ul className="text-sm text-muted-foreground space-y-1">
                 <li>• Cold smoke: below 90°F (32°C)</li>
-                <li>• Hot smoke: 126-176°F (52-80°C)</li>
+                <li>• Hot smoke: 225–275°F (107–135°C)</li>
                 <li>• Hardwoods only (hickory, oak, apple)</li>
                 <li>• Never use treated or resinous wood</li>
               </ul>
