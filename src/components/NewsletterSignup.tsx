@@ -14,7 +14,7 @@ export function NewsletterSignup() {
     if (email) {
       setIsSubmitted(true);
       toast({
-        title: "Welcome to PreserveWise!",
+        title: "Welcome to PreserveCraft!",
         description: "You've been added to our newsletter. Check your inbox for preservation tips!",
       });
     }

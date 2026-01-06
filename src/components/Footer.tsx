@@ -34,7 +34,7 @@ export function Footer() {
                 <Leaf className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="font-serif text-xl font-bold">
-                Preserve<span className="text-accent">Wise</span>
+                Preserve<span className="text-accent">Craft</span>
               </span>
             </Link>
             <p className="text-sm opacity-80 leading-relaxed">
@@ -100,7 +100,7 @@ export function Footer() {
 
         <div className="border-t border-cream/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm opacity-60">
-            © {new Date().getFullYear()} PreserveWise. All rights reserved.
+            © {new Date().getFullYear()} PreserveCraft. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-sm opacity-60">
             <Link to="/privacy" className="hover:opacity-100 hover:text-accent transition-all">
@@ -109,7 +109,7 @@ export function Footer() {
             <Link to="/terms" className="hover:opacity-100 hover:text-accent transition-all">
               Terms of Use
             </Link>
-            <a href="mailto:contact@preservewise.com" className="hover:opacity-100 hover:text-accent transition-all inline-flex items-center gap-1">
+            <a href="mailto:contact@preservecraft.com" className="hover:opacity-100 hover:text-accent transition-all inline-flex items-center gap-1">
               <Mail className="w-4 h-4" />
               Contact
             </a>

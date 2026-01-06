@@ -10,7 +10,6 @@ const navigation = [
   { name: "Dehydrating", href: "/dehydrating" },
   { name: "Fermenting", href: "/fermenting" },
   { name: "Curing & Smoking", href: "/curing" },
-  { name: "DIY Storage", href: "/storage" },
   { name: "Equipment", href: "/equipment" },
 ];
 
@@ -26,7 +25,7 @@ export function Header() {
             <Leaf className="w-5 h-5 text-primary-foreground" />
           </div>
           <span className="font-serif text-xl font-bold text-foreground">
-            Preserve<span className="text-primary">Wise</span>
+            Preserve<span className="text-primary">Craft</span>
           </span>
         </Link>
 
