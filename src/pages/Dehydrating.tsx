@@ -49,15 +49,21 @@ const Dehydrating = () => {
               </p>
               
               <ScienceFact
-                fact="Food is considered safely dried when it contains 10-20% moisture (depending on the food type). Fruits should be leathery, vegetables should be brittle."
+                fact="Food is considered safely dried when it contains 10–20% moisture (depending on the food type). Fruits should be leathery, vegetables should be brittle."
                 source="Penn State Extension"
                 sourceUrl="https://extension.psu.edu"
               />
               
               <ScienceFact
-                fact="Drying at temperatures between 130-140°F (54-60°C) is ideal. Higher temperatures cause 'case hardening'—a dry exterior trapping moisture inside."
+                fact="Drying at temperatures between 130–140°F (54–60°C) is ideal. Higher temperatures cause 'case hardening'—a dry exterior trapping moisture inside."
                 source="University of Minnesota Extension"
                 sourceUrl="https://extension.umn.edu"
+              />
+
+              <ScienceFact
+                fact="Health Canada advises that properly dried foods with moisture content below 15% are shelf-stable when stored in airtight containers away from light and heat."
+                source="Health Canada"
+                sourceUrl="https://www.canada.ca/en/health-canada/services/food-safety.html"
               />
             </div>
             
@@ -112,7 +118,7 @@ const Dehydrating = () => {
               </div>
               <h3 className="font-serif text-xl font-semibold mb-3">Sun Drying</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                The oldest method, requiring hot (85°F+), dry, breezy conditions. 
+                The oldest method, requiring hot (85°F+ / 30°C+), dry, breezy conditions. 
                 Works best for fruits high in sugar and acid.
               </p>
               <ul className="text-sm text-muted-foreground space-y-1">
@@ -147,7 +153,7 @@ const Dehydrating = () => {
               </div>
               <h3 className="font-serif text-xl font-semibold mb-3">Oven Drying</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Can work if your oven maintains low temperatures (140°F or below). 
+                Can work if your oven maintains low temperatures (140°F / 60°C or below). 
                 Uses more energy than a dehydrator.
               </p>
               <ul className="text-sm text-muted-foreground space-y-1">
@@ -168,7 +174,7 @@ const Dehydrating = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-card rounded-xl p-6 border">
-              <h3 className="font-serif text-xl font-semibold mb-4">Fruits (130-140°F)</h3>
+              <h3 className="font-serif text-xl font-semibold mb-4">Fruits (130–140°F / 54–60°C)</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between py-2 border-b">
                   <span>Apples (sliced)</span>
@@ -197,7 +203,7 @@ const Dehydrating = () => {
             </div>
             
             <div className="bg-card rounded-xl p-6 border">
-              <h3 className="font-serif text-xl font-semibold mb-4">Vegetables (125-135°F)</h3>
+              <h3 className="font-serif text-xl font-semibold mb-4">Vegetables (125–135°F / 52–57°C)</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between py-2 border-b">
                   <span>Tomatoes (sliced)</span>
@@ -285,7 +291,7 @@ const Dehydrating = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AffiliateProductCard
               name="Excalibur 9-Tray Dehydrator"
-              description="Professional-grade horizontal airflow. Adjustable thermostat, 15 sq ft drying space."
+              description="Professional-grade horizontal airflow. Adjustable thermostat, 15 sq ft (1.4 m²) drying space."
               image={equipmentImage}
               price="$299.99"
               rating={5}

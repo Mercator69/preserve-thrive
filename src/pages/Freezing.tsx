@@ -60,6 +60,12 @@ const Freezing = () => {
                 source="National Center for Home Food Preservation"
                 sourceUrl="https://nchfp.uga.edu"
               />
+
+              <ScienceFact
+                fact="Health Canada recommends maintaining freezer temperature at -18°C (0°F) or colder. Their food safety guidelines for home freezing align with USDA recommendations."
+                source="Health Canada"
+                sourceUrl="https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-food-storage.html"
+              />
             </div>
             
             <div className="bg-card rounded-xl p-6 border">
@@ -124,10 +130,10 @@ const Freezing = () => {
               <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
                 <Snowflake className="w-6 h-6 text-secondary" />
               </div>
-              <h3 className="font-semibold mb-2">Maintain 0°F</h3>
+              <h3 className="font-semibold mb-2">Maintain 0°F (-18°C)</h3>
               <p className="text-sm text-muted-foreground">
                 Keep your freezer at 0°F (-18°C) or below. Use a freezer thermometer 
-                to verify—door thermometers aren't always accurate.
+                to verify—door thermometers are not always accurate.
               </p>
             </div>
             
@@ -268,7 +274,7 @@ const Freezing = () => {
             />
             <AffiliateProductCard
               name="Freezer Thermometer"
-              description="Accurate digital thermometer ensures your freezer maintains safe 0°F temperature."
+              description="Accurate digital thermometer ensures your freezer maintains safe 0°F (-18°C) temperature."
               image={equipmentImage}
               price="$12.99"
               rating={4}

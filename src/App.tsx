@@ -11,6 +11,7 @@ import Fermenting from "./pages/Fermenting";
 import Curing from "./pages/Curing";
 import Storage from "./pages/Storage";
 import Equipment from "./pages/Equipment";
+import Tools from "./pages/Tools";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/fermenting" element={<Fermenting />} />
           <Route path="/curing" element={<Curing />} />
           <Route path="/storage" element={<Storage />} />
+          <Route path="/tools" element={<Tools />} />
           <Route path="/equipment" element={<Equipment />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
