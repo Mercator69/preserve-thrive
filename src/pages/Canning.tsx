@@ -74,7 +74,7 @@ const Canning = () => {
               <ScienceFact
                 fact="Health Canada recommends using only tested recipes from trusted sources and adjusting processing times for altitude. Canadian guidelines align with USDA standards for home canning safety."
                 source="Health Canada - Food Safety"
-                sourceUrl="https://www.canada.ca/en/health-canada/services/general-food-safety-tips/home-food-preservation.html"
+                sourceUrl="https://www.canada.ca/en/services/health/food-safety.html"
               />
             </div>
             

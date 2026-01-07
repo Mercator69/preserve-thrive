@@ -10,7 +10,7 @@ const navigation = [
   { name: "Dehydrating", href: "/dehydrating" },
   { name: "Fermenting", href: "/fermenting" },
   { name: "Curing & Smoking", href: "/curing" },
-  { name: "Tools", href: "/tools" },
+  { name: "Recipes", href: "/recipes" },
   { name: "Equipment", href: "/equipment" },
 ];
 

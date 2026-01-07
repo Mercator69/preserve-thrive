@@ -241,8 +241,93 @@ const Freezing = () => {
         </div>
       </section>
 
-      {/* Equipment */}
+      {/* Freeze Drying Section */}
       <section className="py-16 bg-muted/50">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <Badge variant="secondary">Advanced Method</Badge>
+              <h2 className="font-serif text-3xl font-bold">Freeze Drying (Lyophilization)</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Freeze drying removes up to 99% of moisture through sublimation—ice turns directly 
+                to vapor without passing through a liquid state. This preserves food for 25+ years 
+                while retaining most nutrients, flavor, and texture.
+              </p>
+              
+              <ScienceFact
+                fact="Freeze-dried foods retain 97% of their nutritional value compared to 40-60% for other preservation methods. The low-temperature process protects heat-sensitive vitamins and enzymes."
+                source="USDA Agricultural Research Service"
+                sourceUrl="https://www.ars.usda.gov"
+              />
+              
+              <div className="space-y-4">
+                <h4 className="font-semibold">How It Works:</h4>
+                <ol className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">1</span>
+                    <span><strong>Freezing:</strong> Food is frozen to -40°F (-40°C) or colder</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">2</span>
+                    <span><strong>Primary Drying:</strong> Vacuum and gentle heat cause ice to sublimate</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">3</span>
+                    <span><strong>Secondary Drying:</strong> Remaining moisture is removed at slightly higher temps</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            
+            <div className="bg-card rounded-xl p-6 border">
+              <h3 className="font-serif text-xl font-semibold mb-4">Freeze Drying vs. Dehydrating</h3>
+              <div className="space-y-4">
+                <div className="grid grid-cols-3 gap-2 text-sm font-medium border-b pb-2">
+                  <span>Factor</span>
+                  <span>Freeze Dry</span>
+                  <span>Dehydrate</span>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-sm">
+                  <span className="text-muted-foreground">Shelf Life</span>
+                  <span className="font-medium text-primary">25+ years</span>
+                  <span>1-5 years</span>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-sm">
+                  <span className="text-muted-foreground">Nutrition</span>
+                  <span className="font-medium text-primary">97% retained</span>
+                  <span>40-60%</span>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-sm">
+                  <span className="text-muted-foreground">Texture</span>
+                  <span className="font-medium text-primary">Original when rehydrated</span>
+                  <span>Chewy/leathery</span>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-sm">
+                  <span className="text-muted-foreground">Equipment Cost</span>
+                  <span>$2,000-4,000</span>
+                  <span className="font-medium text-primary">$50-200</span>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-sm">
+                  <span className="text-muted-foreground">Process Time</span>
+                  <span>20-40 hours</span>
+                  <span className="font-medium text-primary">4-12 hours</span>
+                </div>
+              </div>
+              
+              <div className="mt-6 p-4 bg-muted rounded-lg">
+                <h4 className="font-semibold mb-2">Best Foods for Freeze Drying</h4>
+                <p className="text-sm text-muted-foreground">
+                  Fruits, vegetables, cooked meats, eggs, dairy, complete meals, and even ice cream. 
+                  High-fat and high-sugar foods work less well.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Equipment */}
+      <section className="py-16">
         <div className="container-wide">
           <h2 className="font-serif text-3xl font-bold mb-8">Recommended Equipment</h2>
           
@@ -273,12 +358,12 @@ const Freezing = () => {
               category="Containers"
             />
             <AffiliateProductCard
-              name="Freezer Thermometer"
-              description="Accurate digital thermometer ensures your freezer maintains safe 0°F (-18°C) temperature."
+              name="Harvest Right Home Freeze Dryer"
+              description="Medium-size home freeze dryer. Preserves 7-10 lbs per batch for long-term storage."
               image={equipmentImage}
-              price="$12.99"
-              rating={4}
-              category="Tools"
+              price="$2,895.00"
+              rating={5}
+              category="Freeze Dryer"
             />
           </div>
         </div>

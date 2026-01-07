@@ -2,7 +2,9 @@ import { Layout } from "@/components/Layout";
 import { ScienceFact } from "@/components/ScienceFact";
 import { AffiliateProductCard } from "@/components/AffiliateProductCard";
 import { Badge } from "@/components/ui/badge";
-import { Beaker, Heart, Clock, AlertTriangle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Beaker, Heart, Clock, AlertTriangle, ArrowRight } from "lucide-react";
 
 import fermentingImage from "@/assets/fermenting.jpg";
 import equipmentImage from "@/assets/equipment.jpg";
@@ -51,20 +53,20 @@ const Fermenting = () => {
               
               <ScienceFact
                 fact="The salt concentration of 2–3% creates a selective environment where beneficial Lactobacillus thrive while harmful bacteria are inhibited. Too little salt allows pathogens; too much kills beneficial bacteria."
-                source="University of Georgia Extension"
+                source="National Center for Home Food Preservation"
                 sourceUrl="https://nchfp.uga.edu"
               />
               
               <ScienceFact
                 fact="As fermentation progresses, pH drops from around 6.5 to below 4.6, creating an acidic environment that prevents the growth of pathogenic bacteria including Clostridium botulinum."
-                source="Revolution Fermentation"
-                sourceUrl="https://revolutionfermentation.com"
+                source="USDA Food Safety and Inspection Service"
+                sourceUrl="https://www.fsis.usda.gov"
               />
 
               <ScienceFact
                 fact="Health Canada confirms that properly fermented vegetables with a pH below 4.6 are safe for storage. The Canadian Food Inspection Agency recognizes lacto-fermentation as a valid preservation method."
-                source="Health Canada"
-                sourceUrl="https://www.canada.ca/en/health-canada/services/food-safety.html"
+                source="Health Canada - Food Safety"
+                sourceUrl="https://www.canada.ca/en/services/health/food-safety.html"
               />
             </div>
             
@@ -116,7 +118,7 @@ const Fermenting = () => {
             Health Benefits of Fermented Foods
           </h2>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-            Research supports numerous health benefits from consuming fermented vegetables, 
+            Scientific research supports numerous health benefits from consuming fermented vegetables, 
             from improved digestion to enhanced immune function.
           </p>
           
@@ -127,7 +129,7 @@ const Fermenting = () => {
               </div>
               <h3 className="font-semibold mb-2">Probiotic-Rich</h3>
               <p className="text-sm text-muted-foreground">
-                Live beneficial bacteria support gut health and the microbiome.
+                Live beneficial bacteria support gut health and the microbiome.<sup className="text-xs">[1]</sup>
               </p>
             </div>
             
@@ -137,7 +139,7 @@ const Fermenting = () => {
               </div>
               <h3 className="font-semibold mb-2">Enhanced Nutrients</h3>
               <p className="text-sm text-muted-foreground">
-                Fermentation increases bioavailability of vitamins and minerals.
+                Fermentation increases bioavailability of vitamins and minerals.<sup className="text-xs">[2]</sup>
               </p>
             </div>
             
@@ -147,7 +149,7 @@ const Fermenting = () => {
               </div>
               <h3 className="font-semibold mb-2">Better Digestion</h3>
               <p className="text-sm text-muted-foreground">
-                Pre-digested by bacteria, making nutrients easier to absorb.
+                Pre-digested by bacteria, making nutrients easier to absorb.<sup className="text-xs">[3]</sup>
               </p>
             </div>
             
@@ -157,9 +159,18 @@ const Fermenting = () => {
               </div>
               <h3 className="font-semibold mb-2">No Heat Required</h3>
               <p className="text-sm text-muted-foreground">
-                Preserves heat-sensitive vitamins that cooking destroys.
+                Preserves heat-sensitive vitamins that cooking destroys.<sup className="text-xs">[2]</sup>
               </p>
             </div>
+          </div>
+          
+          <div className="mt-8 bg-card rounded-xl p-6 border max-w-3xl mx-auto">
+            <h4 className="font-semibold mb-3">Scientific References</h4>
+            <ol className="text-xs text-muted-foreground space-y-2 list-decimal list-inside">
+              <li>Marco ML, et al. "Health benefits of fermented foods: microbiota and beyond." <em>Current Opinion in Biotechnology</em>. 2017;44:94-102. <a href="https://pubmed.ncbi.nlm.nih.gov/27998788/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">PubMed</a></li>
+              <li>Şanlier N, et al. "Health benefits of fermented foods." <em>Critical Reviews in Food Science and Nutrition</em>. 2019;59(3):506-527. <a href="https://pubmed.ncbi.nlm.nih.gov/28945458/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">PubMed</a></li>
+              <li>Dimidi E, et al. "Fermented Foods: Definitions and Characteristics, Impact on the Gut Microbiota and Effects on Gastrointestinal Health and Disease." <em>Nutrients</em>. 2019;11(8):1806. <a href="https://pubmed.ncbi.nlm.nih.gov/31387262/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">PubMed</a></li>
+            </ol>
           </div>
         </div>
       </section>
@@ -231,6 +242,35 @@ const Fermenting = () => {
                   <span className="font-medium">3-7 days</span>
                 </div>
               </div>
+            </div>
+            
+            {/* Kombucha Card */}
+            <div className="bg-card rounded-xl p-6 border relative overflow-hidden">
+              <Badge className="absolute top-4 right-4">Popular</Badge>
+              <h3 className="font-serif text-xl font-semibold mb-3">Kombucha</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Fermented sweet tea made with a SCOBY. Fizzy, tangy, and endlessly customizable with flavors.
+              </p>
+              <div className="space-y-2 text-sm mb-4">
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Tea base</span>
+                  <span className="font-medium">Black or green tea</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Temperature</span>
+                  <span className="font-medium">68–85°F (20–29°C)</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Time</span>
+                  <span className="font-medium">7-14 days</span>
+                </div>
+              </div>
+              <Button asChild variant="outline" size="sm" className="w-full">
+                <Link to="/kombucha">
+                  Complete Kombucha Guide
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
