@@ -12,6 +12,11 @@ import Kombucha from "./pages/Kombucha";
 import Curing from "./pages/Curing";
 import Storage from "./pages/Storage";
 import Equipment from "./pages/Equipment";
+import FreezeDryers from "./pages/equipment/FreezeDryers";
+import VacuumSealers from "./pages/equipment/VacuumSealers";
+import Dehydrators from "./pages/equipment/Dehydrators";
+import Canners from "./pages/equipment/Canners";
+import FermentationEquipment from "./pages/equipment/FermentationEquipment";
 import Tools from "./pages/Tools";
 import RecipesIndex from "./pages/recipes/index";
 import StrawberryJam from "./pages/recipes/StrawberryJam";
@@ -43,6 +48,11 @@ const App = () => (
           <Route path="/storage" element={<Storage />} />
           <Route path="/tools" element={<Tools />} />
           <Route path="/equipment" element={<Equipment />} />
+          <Route path="/equipment/freeze-dryers" element={<FreezeDryers />} />
+          <Route path="/equipment/vacuum-sealers" element={<VacuumSealers />} />
+          <Route path="/equipment/dehydrators" element={<Dehydrators />} />
+          <Route path="/equipment/canners" element={<Canners />} />
+          <Route path="/equipment/fermentation" element={<FermentationEquipment />} />
           <Route path="/recipes" element={<RecipesIndex />} />
           <Route path="/recipes/strawberry-jam" element={<StrawberryJam />} />
           <Route path="/recipes/bread-butter-pickles" element={<BreadButterPickles />} />
