@@ -5,16 +5,10 @@ import { AffiliateProductCard } from "@/components/AffiliateProductCard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { 
-  AlertTriangle, 
-  Thermometer, 
-  Clock, 
-  Droplets, 
-  CheckCircle,
-  ArrowRight
-} from "lucide-react";
+import { AlertTriangle, Thermometer, Clock, Droplets, CheckCircle, ArrowRight } from "lucide-react";
 
 import canningImage from "@/assets/canning.jpg";
+import equipmentImage from "@/assets/equipment.jpg";
 
 const Canning = () => {
   return (
@@ -22,24 +16,17 @@ const Canning = () => {
       {/* Hero */}
       <section className="relative py-20 lg:py-32">
         <div className="absolute inset-0 z-0">
-          <img
-            src={canningImage}
-            alt="Water bath canning process"
-            className="w-full h-full object-cover"
-          />
+          <img src={canningImage} alt="Water bath canning process" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60" />
         </div>
-        
+
         <div className="container-wide relative z-10">
           <div className="max-w-2xl space-y-6">
             <Badge variant="secondary">Preservation Method</Badge>
-            <h1 className="font-serif text-4xl lg:text-5xl font-bold">
-              Canning: Water Bath & Pressure Methods
-            </h1>
+            <h1 className="font-serif text-4xl lg:text-5xl font-bold">Canning: Water Bath & Pressure Methods</h1>
             <p className="text-lg text-muted-foreground">
-              Home canning is a time-honored preservation method that, when done correctly, 
-              can safely preserve food for 1-5 years. Understanding the science behind 
-              canning is essential for preventing foodborne illness.
+              Home canning is a time-honored preservation method that, when done correctly, can safely preserve food for
+              1-5 years. Understanding the science behind canning is essential for preventing foodborne illness.
             </p>
           </div>
         </div>
@@ -52,18 +39,17 @@ const Canning = () => {
             <div className="space-y-6">
               <h2 className="font-serif text-3xl font-bold">The Science of Canning</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Canning preserves food through the application of heat, which destroys 
-                microorganisms and inactivates enzymes that cause spoilage. The sealed 
-                environment prevents recontamination. The key to safe canning is 
+                Canning preserves food through the application of heat, which destroys microorganisms and inactivates
+                enzymes that cause spoilage. The sealed environment prevents recontamination. The key to safe canning is
                 understanding pH levels and their relationship to processing methods.
               </p>
-              
+
               <ScienceFact
                 fact="Clostridium botulinum spores can only be destroyed at temperatures above 240°F (116°C), which requires pressure canning. Water bath canning reaches only 212°F (100°C)."
                 source="USDA Complete Guide to Home Canning"
                 sourceUrl="https://nchfp.uga.edu"
               />
-              
+
               <ScienceFact
                 fact="Foods with a pH of 4.6 or lower (high-acid foods) can be safely processed in a water bath canner. Low-acid foods (pH above 4.6) require pressure canning."
                 source="Penn State Extension"
@@ -76,7 +62,7 @@ const Canning = () => {
                 sourceUrl="https://www.canada.ca/en/services/health/food-safety.html"
               />
             </div>
-            
+
             <div className="bg-card rounded-xl p-6 border">
               <h3 className="font-serif text-xl font-semibold mb-4">pH Guide for Canning</h3>
               <div className="space-y-3">
@@ -90,7 +76,7 @@ const Canning = () => {
                   <li>• Pickles and relishes</li>
                   <li>• Jams, jellies, and preserves</li>
                 </ul>
-                
+
                 <div className="flex items-center justify-between p-3 bg-destructive/5 rounded-lg mt-4">
                   <span className="font-medium">Low-Acid (pH &gt; 4.6)</span>
                   <Badge variant="destructive">Pressure Canning Required</Badge>
@@ -110,10 +96,8 @@ const Canning = () => {
       {/* Two Methods */}
       <section className="py-16 bg-muted/50">
         <div className="container-wide">
-          <h2 className="font-serif text-3xl font-bold text-center mb-12">
-            Two Canning Methods
-          </h2>
-          
+          <h2 className="font-serif text-3xl font-bold text-center mb-12">Two Canning Methods</h2>
+
           <div className="grid md:grid-cols-2 gap-8">
             {/* Water Bath */}
             <div className="bg-card rounded-xl p-8 border hover-lift">
@@ -122,31 +106,40 @@ const Canning = () => {
               </div>
               <h3 className="font-serif text-2xl font-semibold mb-3">Water Bath Canning</h3>
               <p className="text-muted-foreground mb-6">
-                Uses boiling water at 212°F (100°C) to process high-acid foods. The acid 
-                prevents the growth of Clostridium botulinum, making this method safe 
-                for fruits, pickles, and properly acidified tomatoes.
+                Uses boiling water at 212°F (100°C) to process high-acid foods. The acid prevents the growth of
+                Clostridium botulinum, making this method safe for fruits, pickles, and properly acidified tomatoes.
               </p>
-              
+
               <h4 className="font-semibold mb-3">Basic Process:</h4>
               <ol className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
-                  <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">1</span>
+                  <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">
+                    1
+                  </span>
                   Fill canner with water, place rack in bottom, heat water
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">2</span>
+                  <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">
+                    2
+                  </span>
                   Fill hot, sterilized jars with prepared food, leaving proper headspace
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">3</span>
+                  <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">
+                    3
+                  </span>
                   Remove air bubbles, wipe rims, apply lids and bands
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">4</span>
+                  <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">
+                    4
+                  </span>
                   Process in boiling water for specified time
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">5</span>
+                  <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">
+                    5
+                  </span>
                   Cool on rack for 12-24 hours, check seals
                 </li>
               </ol>
@@ -159,11 +152,10 @@ const Canning = () => {
               </div>
               <h3 className="font-serif text-2xl font-semibold mb-3">Pressure Canning</h3>
               <p className="text-muted-foreground mb-6">
-                Creates temperatures of 240–250°F (116–121°C) under pressure, required 
-                for low-acid foods. This is the ONLY safe method for canning vegetables, 
-                meats, poultry, and seafood.
+                Creates temperatures of 240–250°F (116–121°C) under pressure, required for low-acid foods. This is the
+                ONLY safe method for canning vegetables, meats, poultry, and seafood.
               </p>
-              
+
               <h4 className="font-semibold mb-3">Critical Points:</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
@@ -176,7 +168,8 @@ const Canning = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  Adjust pressure for altitude: add 0.5 psi per 1,000 ft (300 m) above sea level, or add 1 lb (0.07 bar) per 2,000 ft (610 m)
+                  Adjust pressure for altitude: add 0.5 psi per 1,000 ft (300 m) above sea level, or add 1 lb (0.07 bar)
+                  per 2,000 ft (610 m)
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
@@ -202,16 +195,23 @@ const Canning = () => {
             <div>
               <h3 className="font-serif text-xl font-semibold mb-2">Botulism Prevention</h3>
               <p className="text-muted-foreground mb-4">
-                Clostridium botulinum produces a deadly toxin in low-acid, anaerobic 
-                (sealed) environments. Never process low-acid foods in a water bath 
-                canner. The toxin is odorless and tasteless—you cannot detect contaminated 
-                food by smell or appearance.
+                Clostridium botulinum produces a deadly toxin in low-acid, anaerobic (sealed) environments. Never
+                process low-acid foods in a water bath canner. The toxin is odorless and tasteless—you cannot detect
+                contaminated food by smell or appearance.
               </p>
               <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• <strong>Always use tested recipes</strong> from USDA or university extensions</li>
-                <li>• <strong>Never modify</strong> ingredient proportions in canning recipes</li>
-                <li>• <strong>Discard any jars</strong> with broken seals, off-odors, or spurting liquid</li>
-                <li>• <strong>When in doubt, throw it out</strong></li>
+                <li>
+                  • <strong>Always use tested recipes</strong> from USDA or university extensions
+                </li>
+                <li>
+                  • <strong>Never modify</strong> ingredient proportions in canning recipes
+                </li>
+                <li>
+                  • <strong>Discard any jars</strong> with broken seals, off-odors, or spurting liquid
+                </li>
+                <li>
+                  • <strong>When in doubt, throw it out</strong>
+                </li>
               </ul>
             </div>
           </div>
@@ -224,9 +224,7 @@ const Canning = () => {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="font-serif text-3xl font-bold">Essential Canning Equipment</h2>
-              <p className="text-muted-foreground mt-2">
-                Quality equipment makes canning safer and more efficient.
-              </p>
+              <p className="text-muted-foreground mt-2">Quality equipment makes canning safer and more efficient.</p>
             </div>
             <Button asChild variant="outline">
               <Link to="/equipment">
@@ -235,44 +233,40 @@ const Canning = () => {
               </Link>
             </Button>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AffiliateProductCard
-              name="NESCO Electric Water Bath Canner"
-              description="12-quart stainless steel with digital controls. Auto shut-off and cool-touch handles. Includes jar rack."
-              image="https://nesco.com/cdn/shop/products/CEC-12_Main_1200x.jpg"
-              price="$149.99"
-              rating={5}
-              category="Water Bath"
-              amazonLink="https://www.amazon.com/dp/B09XBVJ2KQ"
+              name="NESCO 9.5 Qt. Digital Smart Canner NPC-9"
+              description="9.5-quart capacity, designed for Pressure Canning, Pressure Cooking, Steam Cooking, and Slow Cooking. includes standard and high altitude limiting vales, 10 PSI and 15 PSI."
+              image="https://b4333452.smushcdn.com/4333452/wp-content/uploads/2019/05/NPC-9-New-Panel-1-scaled.jpg?lossy=2&strip=1&webp=1"
+              price="$169.99"
+              rating={3.2}
+              category="Pressure Canner"
               featured
             />
             <AffiliateProductCard
               name="Presto 23-Quart Pressure Canner"
-              description="Holds 7 quart jars or 20 pint jars. Dial gauge for precise pressure. Works on gas, electric, and induction."
-              image="https://m.media-amazon.com/images/I/81f9h7vXEEL._AC_SL1500_.jpg"
+              description="Holds 7 quart jars (946 mL each) or 20 pint jars (473 mL each). Dial gauge for precise pressure control."
+              image={equipmentImage}
               price="$129.99"
               rating={5}
               category="Pressure Canner"
-              amazonLink="https://www.amazon.com/dp/B0000BYCFU"
             />
             <AffiliateProductCard
-              name="Mason Jar Lifestyle Wide Mouth Lids"
-              description="Reusable stainless steel lids with silicone seals. Dishwasher safe. Fits all wide-mouth jars."
-              image="https://masonjarlifestyle.com/cdn/shop/products/wide-mouth-stainless-steel-storage-lid-with-silicone-seals-for-mason-jars_1200x.jpg"
-              price="$12.99"
-              rating={5}
-              category="Lids"
-              amazonLink="https://masonjarlifestyle.com/products/wide-mouth-stainless-steel-storage-lids"
-            />
-            <AffiliateProductCard
-              name="reCAP Mason Jar Pour Caps"
-              description="Turn any mason jar into a pour container. BPA-free, dishwasher safe. Wide and regular mouth available."
-              image="https://m.media-amazon.com/images/I/71L-Fy8e0ZL._AC_SL1500_.jpg"
-              price="$8.99"
+              name="Ball Mason Jars (12-Pack)"
+              description="Wide-mouth quart jars (946 mL) with lids and bands. BPA-free lids for safe food preservation."
+              image={equipmentImage}
+              price="$17.99"
               rating={4}
-              category="Accessories"
-              amazonLink="https://www.amazon.com/dp/B008MBR16U"
+              category="Jars"
+            />
+            <AffiliateProductCard
+              name="Kitchen Mama 7-Piece Canning Kit"
+              description="Jar lifter, funnel, lid wand, bubble remover, and more. Essential tools for any canner."
+              image={equipmentImage}
+              price="$19.99"
+              rating={4}
+              category="Tools"
             />
           </div>
         </div>
@@ -283,10 +277,10 @@ const Canning = () => {
         <div className="container-wide">
           <h2 className="font-serif text-3xl font-bold mb-8">Common Processing Times</h2>
           <p className="text-muted-foreground mb-8">
-            Processing times vary based on jar size, food type, and altitude. 
-            Always consult USDA guidelines for your specific recipe.
+            Processing times vary based on jar size, food type, and altitude. Always consult USDA guidelines for your
+            specific recipe.
           </p>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-card rounded-xl p-6 border">
               <h3 className="font-serif text-xl font-semibold mb-4 flex items-center gap-2">
@@ -316,7 +310,7 @@ const Canning = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-card rounded-xl p-6 border">
               <h3 className="font-serif text-xl font-semibold mb-4 flex items-center gap-2">
                 <Thermometer className="w-5 h-5 text-secondary" />
@@ -346,10 +340,10 @@ const Canning = () => {
               </div>
             </div>
           </div>
-          
+
           <p className="text-sm text-muted-foreground mt-6 text-center">
-            <strong>Altitude Adjustment:</strong> Add 5 minutes processing time for altitudes 
-            1,001–6,000 ft (305–1,830 m); add 10 minutes for 6,001+ ft (1,830+ m). Canadian and US guidelines are the same.
+            <strong>Altitude Adjustment:</strong> Add 5 minutes processing time for altitudes 1,001–6,000 ft (305–1,830
+            m); add 10 minutes for 6,001+ ft (1,830+ m). Canadian and US guidelines are the same.
           </p>
         </div>
       </section>
