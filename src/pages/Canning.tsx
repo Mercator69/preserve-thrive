@@ -254,11 +254,11 @@ const Canning = () => {
               category="Pressure Canner"
             />
             <AffiliateProductCard
-              name="Ball Mason Jars (12-Pack)"
-              description="Wide-mouth quart jars (946 mL) with lids and bands. BPA-free lids for safe food preservation."
-              image={equipmentImage}
-              price="$17.99"
-              rating={4}
+              name="Ball Mason Jars (8-Pack)"
+              description="8-Pack of regular-mouth Pint(16 oz) jars (946 mL) with lids and bands. BPA-free lids for safe food preservation."
+              image="https://m.media-amazon.com/images/I/41l0xDX4q1L._AC_.jpg"
+              price="$35.87"
+              rating={4.7}
               category="Jars"
             />
             <AffiliateProductCard
