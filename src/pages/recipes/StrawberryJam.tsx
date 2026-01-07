@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Users, Thermometer, CheckCircle, AlertTriangle } from "lucide-react";
 
 import canningImage from "@/assets/canning.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const StrawberryJam = () => {
   return (
@@ -293,37 +292,41 @@ const StrawberryJam = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AffiliateProductCard
-              name="Ball FreshTECH Jam Maker"
-              description="Automatic stirring and heating for perfect jam every time. Makes up to 4 half-pint (250 mL) jars."
-              image={equipmentImage}
-              price="$79.99"
-              rating={4}
+              name="NESCO Electric Water Bath Canner"
+              description="12-quart stainless steel with digital controls. Perfect for jam making with auto shut-off and cool-touch handles."
+              image="https://nesco.com/cdn/shop/products/CEC-12_Main_1200x.jpg"
+              price="$149.99"
+              rating={5}
               category="Appliance"
+              amazonLink="https://www.amazon.com/dp/B09XBVJ2KQ"
               featured
             />
             <AffiliateProductCard
-              name="Sure-Jell Premium Pectin"
-              description="Reliable, consistent gelling for jams and jellies. Works with full sugar recipes."
-              image={equipmentImage}
+              name="Mason Jar Lifestyle Half-Pint Jars"
+              description="Perfect size for jams and jellies. Regular mouth with platinum silicone seals."
+              image="https://masonjarlifestyle.com/cdn/shop/products/half-pint-8-oz-mason-jar-with-regular-mouth-lid_1200x.jpg"
+              price="$24.99"
+              rating={5}
+              category="Jars"
+              amazonLink="https://masonjarlifestyle.com/products/half-pint-8-oz-mason-jars"
+            />
+            <AffiliateProductCard
+              name="reCAP Mason Jar Flip Cap"
+              description="Flip-top pour cap for easy dispensing. BPA-free, fits regular mouth jars."
+              image="https://m.media-amazon.com/images/I/71L-Fy8e0ZL._AC_SL1500_.jpg"
+              price="$6.99"
+              rating={4}
+              category="Lids"
+              amazonLink="https://www.amazon.com/dp/B008MBR16U"
+            />
+            <AffiliateProductCard
+              name="Ball Sure-Jell Premium Pectin"
+              description="Reliable gelling for jams and jellies. Works with full or low-sugar recipes."
+              image="https://m.media-amazon.com/images/I/81hJEKDUxLL._SL1500_.jpg"
               price="$4.99"
               rating={5}
               category="Ingredients"
-            />
-            <AffiliateProductCard
-              name="Ball Half-Pint Jars (12-Pack)"
-              description="Perfect size for jams and jellies. Includes lids and bands."
-              image={equipmentImage}
-              price="$12.99"
-              rating={5}
-              category="Jars"
-            />
-            <AffiliateProductCard
-              name="Stainless Steel Canning Funnel"
-              description="Wide-mouth funnel makes filling jars mess-free. Dishwasher safe."
-              image={equipmentImage}
-              price="$8.99"
-              rating={4}
-              category="Tools"
+              amazonLink="https://www.amazon.com/dp/B00GOEFLN6"
             />
           </div>
         </div>

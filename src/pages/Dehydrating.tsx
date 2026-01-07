@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { Sun, Thermometer, Droplets, Clock } from "lucide-react";
 
 import dehydratingImage from "@/assets/dehydrating.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const Dehydrating = () => {
   return (
@@ -290,37 +289,41 @@ const Dehydrating = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AffiliateProductCard
-              name="Excalibur 9-Tray Dehydrator"
-              description="Professional-grade horizontal airflow. Adjustable thermostat, 15 sq ft (1.4 m²) drying space."
-              image={equipmentImage}
-              price="$299.99"
+              name="NESCO Gardenmaster Pro FD-1018P"
+              description="1000W professional dehydrator with 8 trays expandable to 30. Patented Converga-Flow drying system for even results."
+              image="https://nesco.com/cdn/shop/products/FD-1018P_Main_1200x.jpg"
+              price="$179.99"
               rating={5}
               category="Premium"
+              amazonLink="https://www.amazon.com/dp/B0007XQGOG"
               featured
             />
             <AffiliateProductCard
-              name="NESCO Snackmaster Pro"
-              description="Great entry-level dehydrator. Expandable to 12 trays, adjustable thermostat."
-              image={equipmentImage}
+              name="NESCO Snackmaster Pro FD-75A"
+              description="700W with adjustable thermostat (95°-160°F). Expandable to 12 trays. Top-mounted fan for even drying."
+              image="https://nesco.com/cdn/shop/products/FD-75A_Main_1200x.jpg"
               price="$79.99"
-              rating={4}
-              category="Budget-Friendly"
-            />
-            <AffiliateProductCard
-              name="Cosori Premium Dehydrator"
-              description="Stainless steel with glass door. 6 trays, digital controls, timer up to 48 hours."
-              image={equipmentImage}
-              price="$169.99"
               rating={5}
-              category="Mid-Range"
+              category="Budget-Friendly"
+              amazonLink="https://www.amazon.com/dp/B0090WOCN0"
             />
             <AffiliateProductCard
-              name="Mesh Dehydrator Sheets"
-              description="Fine mesh sheets for drying small items, herbs, and fruit leather. Fits most dehydrators."
-              image={equipmentImage}
-              price="$14.99"
+              name="Harvest Right Home Freeze Dryer"
+              description="Preserve food for 25+ years. Retains 97% nutrition. Perfect for fruits, vegetables, and complete meals."
+              image="https://harvestright.com/wp-content/uploads/2023/03/HR-Standard-Size-White-Left-Facing-v2.png"
+              price="$2,895.00"
+              rating={5}
+              category="Freeze Dryer"
+              amazonLink="https://harvestright.com/product/medium-freeze-dryer/"
+            />
+            <AffiliateProductCard
+              name="NESCO Jerky Spice Works Kit"
+              description="Complete kit with seasoning, cure, and accessories. Makes up to 36 lbs of jerky. Multiple flavor options."
+              image="https://nesco.com/cdn/shop/products/BJX-5_Main_1200x.jpg"
+              price="$24.99"
               rating={4}
               category="Accessories"
+              amazonLink="https://www.amazon.com/dp/B0000CFSV0"
             />
           </div>
         </div>

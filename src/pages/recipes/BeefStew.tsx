@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Users, Thermometer, CheckCircle, AlertTriangle } from "lucide-react";
 
 import canningImage from "@/assets/canning.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const BeefStew = () => {
   return (
@@ -214,10 +213,43 @@ const BeefStew = () => {
         <div className="container-wide">
           <h2 className="font-serif text-2xl font-bold mb-8">Recommended Equipment</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AffiliateProductCard name="All American 21.5-Quart Pressure Canner" description="Metal-to-metal seal—no gasket to replace. Built for serious canners." image={equipmentImage} price="$349.99" rating={5} category="Pressure Canner" featured />
-            <AffiliateProductCard name="Wide-Mouth Quart Jars (12-Pack)" description="Large size perfect for family meals. Wide mouth for chunky stews." image={equipmentImage} price="$17.99" rating={5} category="Jars" />
-            <AffiliateProductCard name="12-Quart Stainless Stockpot" description="Heavy-bottom for even browning and simmering. Essential for stew prep." image={equipmentImage} price="$49.99" rating={5} category="Cookware" />
-            <AffiliateProductCard name="Digital Pressure Gauge Tester" description="Verify your canner gauge accuracy at home. Safety essential." image={equipmentImage} price="$24.99" rating={4} category="Safety" />
+            <AffiliateProductCard 
+              name="All American 21.5-Quart Pressure Canner" 
+              description="Metal-to-metal seal—no gasket to replace. Built for serious canners. Made in USA." 
+              image="https://m.media-amazon.com/images/I/71bP-oE7u2L._AC_SL1500_.jpg" 
+              price="$349.99" 
+              rating={5} 
+              category="Pressure Canner" 
+              amazonLink="https://www.amazon.com/dp/B00004S88Z"
+              featured 
+            />
+            <AffiliateProductCard 
+              name="MasonJars.com Wide Mouth Quart Jars" 
+              description="Large size perfect for family meals. Wide mouth for chunky stews." 
+              image="https://m.media-amazon.com/images/I/81d+ZeLMhVL._AC_SL1500_.jpg" 
+              price="$18.99" 
+              rating={5} 
+              category="Jars" 
+              amazonLink="https://www.amazon.com/dp/B082THSTD1"
+            />
+            <AffiliateProductCard 
+              name="Cuisinart 12-Quart Stockpot" 
+              description="Heavy-bottom stainless steel for even browning. Essential for stew prep." 
+              image="https://m.media-amazon.com/images/I/81YxCklDnkL._AC_SL1500_.jpg" 
+              price="$79.99" 
+              rating={5} 
+              category="Cookware" 
+              amazonLink="https://www.amazon.com/dp/B009JXPS6U"
+            />
+            <AffiliateProductCard 
+              name="Presto Pressure Gauge Tester" 
+              description="Verify your canner gauge accuracy at home. Safety essential." 
+              image="https://m.media-amazon.com/images/I/71bsVAqMN2L._AC_SL1500_.jpg" 
+              price="$15.99" 
+              rating={4} 
+              category="Safety" 
+              amazonLink="https://www.amazon.com/dp/B0000CBJEN"
+            />
           </div>
         </div>
       </section>

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Users, Thermometer, CheckCircle, AlertTriangle } from "lucide-react";
 
 import canningImage from "@/assets/canning.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const PressureGreenBeans = () => {
   return (
@@ -242,10 +241,43 @@ const PressureGreenBeans = () => {
         <div className="container-wide">
           <h2 className="font-serif text-2xl font-bold mb-8">Recommended Equipment</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AffiliateProductCard name="Presto 23-Quart Pressure Canner" description="Holds 7 quart jars. Dial gauge for precise pressure control. Essential for low-acid foods." image={equipmentImage} price="$129.99" rating={5} category="Pressure Canner" featured />
-            <AffiliateProductCard name="Wide-Mouth Quart Jars (12-Pack)" description="Perfect size for family servings of vegetables." image={equipmentImage} price="$17.99" rating={5} category="Jars" />
-            <AffiliateProductCard name="Dial Gauge Test Kit" description="Test your pressure canner gauge accuracy annually. Critical for safety." image={equipmentImage} price="$15.99" rating={4} category="Safety" />
-            <AffiliateProductCard name="Canning Jar Lifter" description="Safely removes hot jars from canner. Non-slip grip." image={equipmentImage} price="$9.99" rating={5} category="Tools" />
+            <AffiliateProductCard 
+              name="Presto 23-Quart Pressure Canner" 
+              description="Holds 7 quart jars. Dial gauge for precise pressure control. Essential for low-acid foods." 
+              image="https://m.media-amazon.com/images/I/81f9h7vXEEL._AC_SL1500_.jpg" 
+              price="$129.99" 
+              rating={5} 
+              category="Pressure Canner" 
+              amazonLink="https://www.amazon.com/dp/B0000BYCFU"
+              featured 
+            />
+            <AffiliateProductCard 
+              name="MasonJars.com Wide Mouth Quart Jars" 
+              description="Perfect size for family servings of vegetables. 12-pack with lids." 
+              image="https://m.media-amazon.com/images/I/81d+ZeLMhVL._AC_SL1500_.jpg" 
+              price="$18.99" 
+              rating={5} 
+              category="Jars" 
+              amazonLink="https://www.amazon.com/dp/B082THSTD1"
+            />
+            <AffiliateProductCard 
+              name="Presto Pressure Canner Gauge" 
+              description="Replacement dial gauge. Test accuracy annually at your local extension office." 
+              image="https://m.media-amazon.com/images/I/71bsVAqMN2L._AC_SL1500_.jpg" 
+              price="$15.99" 
+              rating={4} 
+              category="Safety" 
+              amazonLink="https://www.amazon.com/dp/B0000CBJEN"
+            />
+            <AffiliateProductCard 
+              name="Norpro Canning Jar Lifter" 
+              description="Safely removes hot jars from canner. Secure non-slip grip." 
+              image="https://m.media-amazon.com/images/I/61vxz-d6zHL._AC_SL1500_.jpg" 
+              price="$9.99" 
+              rating={5} 
+              category="Tools" 
+              amazonLink="https://www.amazon.com/dp/B000HJBFBM"
+            />
           </div>
         </div>
       </section>

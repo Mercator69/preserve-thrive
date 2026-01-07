@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 
 import canningImage from "@/assets/canning.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const Canning = () => {
   return (
@@ -239,37 +238,41 @@ const Canning = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AffiliateProductCard
-              name="Ball Enamel Water Bath Canner"
-              description="21-quart (20 L) capacity, includes jar rack. Perfect for beginners and high-acid foods."
-              image={equipmentImage}
-              price="$39.99"
+              name="NESCO Electric Water Bath Canner"
+              description="12-quart stainless steel with digital controls. Auto shut-off and cool-touch handles. Includes jar rack."
+              image="https://nesco.com/cdn/shop/products/CEC-12_Main_1200x.jpg"
+              price="$149.99"
               rating={5}
               category="Water Bath"
+              amazonLink="https://www.amazon.com/dp/B09XBVJ2KQ"
               featured
             />
             <AffiliateProductCard
               name="Presto 23-Quart Pressure Canner"
-              description="Holds 7 quart jars (946 mL each) or 20 pint jars (473 mL each). Dial gauge for precise pressure control."
-              image={equipmentImage}
+              description="Holds 7 quart jars or 20 pint jars. Dial gauge for precise pressure. Works on gas, electric, and induction."
+              image="https://m.media-amazon.com/images/I/81f9h7vXEEL._AC_SL1500_.jpg"
               price="$129.99"
               rating={5}
               category="Pressure Canner"
+              amazonLink="https://www.amazon.com/dp/B0000BYCFU"
             />
             <AffiliateProductCard
-              name="Ball Mason Jars (12-Pack)"
-              description="Wide-mouth quart jars (946 mL) with lids and bands. BPA-free lids for safe food preservation."
-              image={equipmentImage}
-              price="$17.99"
-              rating={4}
-              category="Jars"
+              name="Mason Jar Lifestyle Wide Mouth Lids"
+              description="Reusable stainless steel lids with silicone seals. Dishwasher safe. Fits all wide-mouth jars."
+              image="https://masonjarlifestyle.com/cdn/shop/products/wide-mouth-stainless-steel-storage-lid-with-silicone-seals-for-mason-jars_1200x.jpg"
+              price="$12.99"
+              rating={5}
+              category="Lids"
+              amazonLink="https://masonjarlifestyle.com/products/wide-mouth-stainless-steel-storage-lids"
             />
             <AffiliateProductCard
-              name="Kitchen Mama 7-Piece Canning Kit"
-              description="Jar lifter, funnel, lid wand, bubble remover, and more. Essential tools for any canner."
-              image={equipmentImage}
-              price="$19.99"
+              name="reCAP Mason Jar Pour Caps"
+              description="Turn any mason jar into a pour container. BPA-free, dishwasher safe. Wide and regular mouth available."
+              image="https://m.media-amazon.com/images/I/71L-Fy8e0ZL._AC_SL1500_.jpg"
+              price="$8.99"
               rating={4}
-              category="Tools"
+              category="Accessories"
+              amazonLink="https://www.amazon.com/dp/B008MBR16U"
             />
           </div>
         </div>

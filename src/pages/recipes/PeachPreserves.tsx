@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Users, Thermometer, CheckCircle, AlertTriangle } from "lucide-react";
 
 import canningImage from "@/assets/canning.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const PeachPreserves = () => {
   return (
@@ -187,10 +186,43 @@ const PeachPreserves = () => {
         <div className="container-wide">
           <h2 className="font-serif text-2xl font-bold mb-8">Recommended Equipment</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AffiliateProductCard name="Peach/Tomato Peeler" description="Y-shaped serrated peeler for quick skin removal without blanching." image={equipmentImage} price="$8.99" rating={4} category="Tools" featured />
-            <AffiliateProductCard name="Ball Pint Jars (12-Pack)" description="Standard pint jars perfect for preserves. Includes lids and bands." image={equipmentImage} price="$14.99" rating={5} category="Jars" />
-            <AffiliateProductCard name="Fruit-Fresh Produce Protector" description="Prevents browning while you work. Just add to water." image={equipmentImage} price="$5.99" rating={4} category="Ingredients" />
-            <AffiliateProductCard name="Cherry/Olive Pitter" description="Works for peach pits too. Speeds up prep for halved peaches." image={equipmentImage} price="$12.99" rating={4} category="Tools" />
+            <AffiliateProductCard 
+              name="NESCO Electric Water Bath Canner" 
+              description="12-quart digital canner. Perfect for preserves with auto temp control." 
+              image="https://nesco.com/cdn/shop/products/CEC-12_Main_1200x.jpg" 
+              price="$149.99" 
+              rating={5} 
+              category="Canner" 
+              amazonLink="https://www.amazon.com/dp/B09XBVJ2KQ"
+              featured 
+            />
+            <AffiliateProductCard 
+              name="Mason Jar Lifestyle Pint Jars (12-Pack)" 
+              description="Wide-mouth pint jars with stainless steel lids. Perfect for preserves." 
+              image="https://masonjarlifestyle.com/cdn/shop/products/pint-16-oz-mason-jar-with-wide-mouth-lid_1200x.jpg" 
+              price="$29.99" 
+              rating={5} 
+              category="Jars" 
+              amazonLink="https://masonjarlifestyle.com/products/pint-16-oz-wide-mouth-mason-jars"
+            />
+            <AffiliateProductCard 
+              name="Presto 7-Function Canning Kit" 
+              description="Jar lifter, funnel, bubble remover, and more. All essentials included." 
+              image="https://m.media-amazon.com/images/I/81QW-K9WPHL._AC_SL1500_.jpg" 
+              price="$14.99" 
+              rating={5} 
+              category="Tools" 
+              amazonLink="https://www.amazon.com/dp/B004RTKNQU"
+            />
+            <AffiliateProductCard 
+              name="Mrs. Wages Fruit Pectin" 
+              description="Home-Jell natural fruit pectin for jams and preserves. No artificial colors." 
+              image="https://m.media-amazon.com/images/I/71B-aM4X7jL._SL1500_.jpg" 
+              price="$5.49" 
+              rating={4} 
+              category="Ingredients" 
+              amazonLink="https://www.amazon.com/dp/B0014E0NI6"
+            />
           </div>
         </div>
       </section>

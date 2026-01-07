@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Users, Thermometer, CheckCircle, AlertTriangle } from "lucide-react";
 
 import canningImage from "@/assets/canning.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const TomatoSalsa = () => {
   return (
@@ -189,10 +188,43 @@ const TomatoSalsa = () => {
         <div className="container-wide">
           <h2 className="font-serif text-2xl font-bold mb-8">Recommended Equipment</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AffiliateProductCard name="Food Mill" description="Easily removes tomato skins and seeds. Makes smoother salsa if preferred." image={equipmentImage} price="$44.99" rating={5} category="Tools" featured />
-            <AffiliateProductCard name="Bottled Lime Juice (32 oz)" description="Consistent 5% acidity for safe canning. Essential for salsa recipes." image={equipmentImage} price="$5.99" rating={4} category="Ingredients" />
-            <AffiliateProductCard name="Nitrile Gloves (100-Pack)" description="Protect hands when handling hot peppers. Prevents capsaicin burns." image={equipmentImage} price="$12.99" rating={5} category="Safety" />
-            <AffiliateProductCard name="Ball Pint Jars (12-Pack)" description="Standard pint jars perfect for salsa. Includes lids and bands." image={equipmentImage} price="$14.99" rating={5} category="Jars" />
+            <AffiliateProductCard 
+              name="NESCO Electric Water Bath Canner" 
+              description="12-quart digital canner. Perfect for salsa with auto temp control." 
+              image="https://nesco.com/cdn/shop/products/CEC-12_Main_1200x.jpg" 
+              price="$149.99" 
+              rating={5} 
+              category="Canner" 
+              amazonLink="https://www.amazon.com/dp/B09XBVJ2KQ"
+              featured 
+            />
+            <AffiliateProductCard 
+              name="ReaLime 100% Lime Juice (32 oz)" 
+              description="Consistent 5% acidity for safe canning. Essential for salsa recipes." 
+              image="https://m.media-amazon.com/images/I/71K3WRhx+5L._SL1500_.jpg" 
+              price="$5.99" 
+              rating={4} 
+              category="Ingredients" 
+              amazonLink="https://www.amazon.com/dp/B00HSCHLKU"
+            />
+            <AffiliateProductCard 
+              name="Nitrile Gloves (100-Pack)" 
+              description="Protect hands when handling hot peppers. Prevents capsaicin burns." 
+              image="https://m.media-amazon.com/images/I/71V4TvBKJnL._AC_SL1500_.jpg" 
+              price="$12.99" 
+              rating={5} 
+              category="Safety" 
+              amazonLink="https://www.amazon.com/dp/B07QZLJCMS"
+            />
+            <AffiliateProductCard 
+              name="Mason Jar Lifestyle Pint Jars (12-Pack)" 
+              description="Standard pint jars perfect for salsa. Includes stainless steel lids." 
+              image="https://masonjarlifestyle.com/cdn/shop/products/pint-16-oz-mason-jar-with-regular-mouth-lid_1200x.jpg" 
+              price="$26.99" 
+              rating={5} 
+              category="Jars" 
+              amazonLink="https://masonjarlifestyle.com/products/pint-16-oz-regular-mouth-mason-jars"
+            />
           </div>
         </div>
       </section>
