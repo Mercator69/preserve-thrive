@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Snowflake, Timer, ThermometerSnowflake } from "lucide-react";
 
 import freezingImage from "@/assets/freezing.jpg";
+import equipmentImage from "@/assets/equipment.jpg";
 
 const Freezing = () => {
   return (
@@ -12,24 +13,17 @@ const Freezing = () => {
       {/* Hero */}
       <section className="relative py-20 lg:py-32">
         <div className="absolute inset-0 z-0">
-          <img
-            src={freezingImage}
-            alt="Frozen fruits and vegetables"
-            className="w-full h-full object-cover"
-          />
+          <img src={freezingImage} alt="Frozen fruits and vegetables" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60" />
         </div>
-        
+
         <div className="container-wide relative z-10">
           <div className="max-w-2xl space-y-6">
             <Badge variant="secondary">Preservation Method</Badge>
-            <h1 className="font-serif text-4xl lg:text-5xl font-bold">
-              Freezing: The Simplest Preservation Method
-            </h1>
+            <h1 className="font-serif text-4xl lg:text-5xl font-bold">Freezing: The Simplest Preservation Method</h1>
             <p className="text-lg text-muted-foreground">
-              Freezing is one of the easiest ways to preserve food while maintaining 
-              quality, taste, and nutritional value. Understanding the science helps 
-              you achieve the best results.
+              Freezing is one of the easiest ways to preserve food while maintaining quality, taste, and nutritional
+              value. Understanding the science helps you achieve the best results.
             </p>
           </div>
         </div>
@@ -42,18 +36,17 @@ const Freezing = () => {
             <div className="space-y-6">
               <h2 className="font-serif text-3xl font-bold">The Science of Freezing</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Freezing preserves food by slowing down enzyme activity and preventing 
-                the growth of microorganisms. At 0°F (-18°C) or below, bacteria become 
-                dormant and enzyme reactions are dramatically slowed, preserving the 
-                food's quality for extended periods.
+                Freezing preserves food by slowing down enzyme activity and preventing the growth of microorganisms. At
+                0°F (-18°C) or below, bacteria become dormant and enzyme reactions are dramatically slowed, preserving
+                the food's quality for extended periods.
               </p>
-              
+
               <ScienceFact
                 fact="Food frozen at 0°F (-18°C) is safe indefinitely. Quality, not safety, is the limiting factor. Proper packaging prevents freezer burn and maintains taste."
                 source="USDA Food Safety"
                 sourceUrl="https://www.fsis.usda.gov"
               />
-              
+
               <ScienceFact
                 fact="Blanching vegetables before freezing stops enzyme action that causes loss of flavor, color, and texture. It also cleans the surface of dirt and organisms."
                 source="National Center for Home Food Preservation"
@@ -66,14 +59,14 @@ const Freezing = () => {
                 sourceUrl="https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-food-storage.html"
               />
             </div>
-            
+
             <div className="bg-card rounded-xl p-6 border">
               <h3 className="font-serif text-xl font-semibold mb-4">Why Blanching Matters</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Enzymes in vegetables cause deterioration even at freezer temperatures. 
-                Blanching (brief exposure to boiling water) inactivates these enzymes.
+                Enzymes in vegetables cause deterioration even at freezer temperatures. Blanching (brief exposure to
+                boiling water) inactivates these enzymes.
               </p>
-              
+
               <h4 className="font-semibold mb-3">Common Blanching Times:</h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between py-2 border-b">
@@ -98,8 +91,7 @@ const Freezing = () => {
                 </div>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                Always cool blanched vegetables immediately in ice water for the same 
-                duration as blanching time.
+                Always cool blanched vegetables immediately in ice water for the same duration as blanching time.
               </p>
             </div>
           </div>
@@ -109,10 +101,8 @@ const Freezing = () => {
       {/* Key Principles */}
       <section className="py-16 bg-muted/50">
         <div className="container-wide">
-          <h2 className="font-serif text-3xl font-bold text-center mb-12">
-            Keys to Successful Freezing
-          </h2>
-          
+          <h2 className="font-serif text-3xl font-bold text-center mb-12">Keys to Successful Freezing</h2>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-card rounded-xl p-6 border hover-lift">
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
@@ -120,41 +110,39 @@ const Freezing = () => {
               </div>
               <h3 className="font-semibold mb-2">Freeze Quickly</h3>
               <p className="text-sm text-muted-foreground">
-                Fast freezing creates smaller ice crystals, which cause less cell 
-                damage and better texture when thawed.
+                Fast freezing creates smaller ice crystals, which cause less cell damage and better texture when thawed.
               </p>
             </div>
-            
+
             <div className="bg-card rounded-xl p-6 border hover-lift">
               <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
                 <Snowflake className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="font-semibold mb-2">Maintain 0°F (-18°C)</h3>
               <p className="text-sm text-muted-foreground">
-                Keep your freezer at 0°F (-18°C) or below. Use a freezer thermometer 
-                to verify—door thermometers are not always accurate.
+                Keep your freezer at 0°F (-18°C) or below. Use a freezer thermometer to verify—door thermometers are not
+                always accurate.
               </p>
             </div>
-            
+
             <div className="bg-card rounded-xl p-6 border hover-lift">
               <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
                 <CheckCircle className="w-6 h-6 text-accent" />
               </div>
               <h3 className="font-semibold mb-2">Remove Air</h3>
               <p className="text-sm text-muted-foreground">
-                Air causes freezer burn—those grayish-brown patches that affect 
-                texture and taste. Vacuum sealing is ideal.
+                Air causes freezer burn—those grayish-brown patches that affect texture and taste. Vacuum sealing is
+                ideal.
               </p>
             </div>
-            
+
             <div className="bg-card rounded-xl p-6 border hover-lift">
               <div className="w-12 h-12 rounded-lg bg-harvest/10 flex items-center justify-center mb-4">
                 <Timer className="w-6 h-6 text-harvest" />
               </div>
               <h3 className="font-semibold mb-2">Label Everything</h3>
               <p className="text-sm text-muted-foreground">
-                Include the food name, date frozen, and quantity. Use FIFO 
-                (First In, First Out) rotation.
+                Include the food name, date frozen, and quantity. Use FIFO (First In, First Out) rotation.
               </p>
             </div>
           </div>
@@ -166,10 +154,10 @@ const Freezing = () => {
         <div className="container-wide">
           <h2 className="font-serif text-3xl font-bold mb-8">Recommended Storage Times</h2>
           <p className="text-muted-foreground mb-8">
-            While frozen food is safe indefinitely, quality degrades over time. 
-            These are recommended storage times for best quality at 0°F (-18°C).
+            While frozen food is safe indefinitely, quality degrades over time. These are recommended storage times for
+            best quality at 0°F (-18°C).
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-card rounded-xl p-6 border">
               <h3 className="font-serif text-xl font-semibold mb-4 text-primary">Fruits & Vegetables</h3>
@@ -192,7 +180,7 @@ const Freezing = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-card rounded-xl p-6 border">
               <h3 className="font-serif text-xl font-semibold mb-4 text-secondary">Meats</h3>
               <div className="space-y-2 text-sm">
@@ -214,7 +202,7 @@ const Freezing = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-card rounded-xl p-6 border">
               <h3 className="font-serif text-xl font-semibold mb-4 text-accent">Prepared Foods</h3>
               <div className="space-y-2 text-sm">
@@ -248,36 +236,48 @@ const Freezing = () => {
               <Badge variant="secondary">Advanced Method</Badge>
               <h2 className="font-serif text-3xl font-bold">Freeze Drying (Lyophilization)</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Freeze drying removes up to 99% of moisture through sublimation—ice turns directly 
-                to vapor without passing through a liquid state. This preserves food for 25+ years 
-                while retaining most nutrients, flavor, and texture.
+                Freeze drying removes up to 99% of moisture through sublimation—ice turns directly to vapor without
+                passing through a liquid state. This preserves food for 25+ years while retaining most nutrients,
+                flavor, and texture.
               </p>
-              
+
               <ScienceFact
                 fact="Freeze-dried foods retain 97% of their nutritional value compared to 40-60% for other preservation methods. The low-temperature process protects heat-sensitive vitamins and enzymes."
                 source="USDA Agricultural Research Service"
                 sourceUrl="https://www.ars.usda.gov"
               />
-              
+
               <div className="space-y-4">
                 <h4 className="font-semibold">How It Works:</h4>
                 <ol className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">1</span>
-                    <span><strong>Freezing:</strong> Food is frozen to -40°F (-40°C) or colder</span>
+                    <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">
+                      1
+                    </span>
+                    <span>
+                      <strong>Freezing:</strong> Food is frozen to -40°F (-40°C) or colder
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">2</span>
-                    <span><strong>Primary Drying:</strong> Vacuum and gentle heat cause ice to sublimate</span>
+                    <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">
+                      2
+                    </span>
+                    <span>
+                      <strong>Primary Drying:</strong> Vacuum and gentle heat cause ice to sublimate
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">3</span>
-                    <span><strong>Secondary Drying:</strong> Remaining moisture is removed at slightly higher temps</span>
+                    <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 text-xs">
+                      3
+                    </span>
+                    <span>
+                      <strong>Secondary Drying:</strong> Remaining moisture is removed at slightly higher temps
+                    </span>
                   </li>
                 </ol>
               </div>
             </div>
-            
+
             <div className="bg-card rounded-xl p-6 border">
               <h3 className="font-serif text-xl font-semibold mb-4">Freeze Drying vs. Dehydrating</h3>
               <div className="space-y-4">
@@ -312,12 +312,12 @@ const Freezing = () => {
                   <span className="font-medium text-primary">4-12 hours</span>
                 </div>
               </div>
-              
+
               <div className="mt-6 p-4 bg-muted rounded-lg">
                 <h4 className="font-semibold mb-2">Best Foods for Freeze Drying</h4>
                 <p className="text-sm text-muted-foreground">
-                  Fruits, vegetables, cooked meats, eggs, dairy, complete meals, and even ice cream. 
-                  High-fat and high-sugar foods work less well.
+                  Fruits, vegetables, cooked meats, eggs, dairy, complete meals, and even ice cream. High-fat and
+                  high-sugar foods work less well.
                 </p>
               </div>
             </div>
@@ -329,44 +329,40 @@ const Freezing = () => {
       <section className="py-16">
         <div className="container-wide">
           <h2 className="font-serif text-3xl font-bold mb-8">Recommended Equipment</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AffiliateProductCard
-              name="Harvest Right Medium Home Freeze Dryer"
-              description="Freeze dry 7-10 lbs per batch. Preserves food for 25+ years with 97% nutrition retention. Includes vacuum pump and trays."
-              image="https://harvestright.com/wp-content/uploads/2023/03/HR-Standard-Size-White-Left-Facing-v2.png"
-              price="$2,895.00"
-              rating={5}
-              category="Freeze Dryer"
-              amazonLink="https://harvestright.com/product/medium-freeze-dryer/"
-              featured
-            />
-            <AffiliateProductCard
-              name="NESCO VS-12 Deluxe Vacuum Sealer"
-              description="One-touch operation with automatic bag detection. Includes starter kit with bags and rolls. Pulse vacuum for delicate foods."
-              image="https://nesco.com/cdn/shop/products/VS-12_Main_1200x.jpg"
+              name="FoodSaver Vacuum Sealer"
+              description="Removes air to prevent freezer burn. Keeps food fresh up to 5x longer than ordinary storage."
+              image={equipmentImage}
               price="$99.99"
               rating={5}
               category="Vacuum Sealer"
-              amazonLink="https://www.amazon.com/dp/B000HKFMMS"
+              featured
             />
             <AffiliateProductCard
-              name="OutOfAir Vacuum Sealer Bags (100 Count)"
-              description="11x16 inch commercial grade bags. BPA-free, works with all clamp-style vacuum sealers. Embossed for better air removal."
-              image="https://m.media-amazon.com/images/I/81sV-M8DXAL._AC_SL1500_.jpg"
-              price="$29.99"
-              rating={5}
-              category="Vacuum Bags"
-              amazonLink="https://www.amazon.com/dp/B07B8K6LQX"
-            />
-            <AffiliateProductCard
-              name="KitchenBoss Vacuum Sealer G320"
-              description="Compact design with dry/moist modes. Built-in cutter and bag storage. Includes starter bags and roll."
-              image="https://m.media-amazon.com/images/I/71PqHqJOjsL._AC_SL1500_.jpg"
-              price="$69.99"
+              name="Silicone Freezer Bags"
+              description="Reusable, eco-friendly alternative to plastic bags. Dishwasher safe and airtight seal."
+              image={equipmentImage}
+              price="$24.99"
               rating={4}
-              category="Vacuum Sealer"
-              amazonLink="https://www.amazon.com/dp/B07FM3J9NL"
+              category="Containers"
+            />
+            <AffiliateProductCard
+              name="Glass Freezer Containers"
+              description="BPA-free glass with leak-proof lids. Freezer-to-oven safe for easy meal prep."
+              image="https://m.media-amazon.com/images/I/71nsa8rWKiL._AC_SX679_.jpg"
+              price="$29.99"
+              rating={4}
+              category="Containers"
+            />
+            <AffiliateProductCard
+              name="Harvest Right Home Freeze Dryer"
+              description="Medium-size home freeze dryer. Preserves 7-10 lbs per batch for long-term storage."
+              image={equipmentImage}
+              price="$2,895.00"
+              rating={5}
+              category="Freeze Dryer"
             />
           </div>
         </div>
