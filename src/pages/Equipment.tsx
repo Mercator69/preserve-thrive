@@ -2,8 +2,10 @@ import { Layout } from "@/components/Layout";
 import { AffiliateProductCard } from "@/components/AffiliateProductCard";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AlertTriangle, ExternalLink } from "lucide-react";
+import { AlertTriangle, ExternalLink, ArrowRight } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 import equipmentImage from "@/assets/equipment.jpg";
 
@@ -49,11 +51,21 @@ const Equipment = () => {
         <div className="container-wide">
           <Tabs defaultValue="freeze-drying" className="space-y-8">
             <TabsList className="w-full justify-start overflow-x-auto flex-nowrap bg-muted p-1 h-auto">
-              <TabsTrigger value="freeze-drying" className="px-4 py-2">Freeze Drying</TabsTrigger>
-              <TabsTrigger value="vacuum-sealing" className="px-4 py-2">Vacuum Sealing</TabsTrigger>
-              <TabsTrigger value="dehydrating" className="px-4 py-2">Dehydrating</TabsTrigger>
-              <TabsTrigger value="canning" className="px-4 py-2">Canning</TabsTrigger>
-              <TabsTrigger value="fermenting" className="px-4 py-2">Fermenting</TabsTrigger>
+              <TabsTrigger value="freeze-drying" className="px-4 py-2">
+                <Link to="/equipment/freeze-dryers" className="flex items-center gap-1">Freeze Drying</Link>
+              </TabsTrigger>
+              <TabsTrigger value="vacuum-sealing" className="px-4 py-2">
+                <Link to="/equipment/vacuum-sealers" className="flex items-center gap-1">Vacuum Sealing</Link>
+              </TabsTrigger>
+              <TabsTrigger value="dehydrating" className="px-4 py-2">
+                <Link to="/equipment/dehydrators" className="flex items-center gap-1">Dehydrating</Link>
+              </TabsTrigger>
+              <TabsTrigger value="canning" className="px-4 py-2">
+                <Link to="/equipment/canners" className="flex items-center gap-1">Canning</Link>
+              </TabsTrigger>
+              <TabsTrigger value="fermenting" className="px-4 py-2">
+                <Link to="/equipment/fermentation" className="flex items-center gap-1">Fermenting</Link>
+              </TabsTrigger>
               <TabsTrigger value="mason-jars" className="px-4 py-2">Mason Jar Accessories</TabsTrigger>
               <TabsTrigger value="budget" className="px-4 py-2">Budget Options</TabsTrigger>
             </TabsList>
