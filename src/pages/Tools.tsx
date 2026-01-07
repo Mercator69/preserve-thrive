@@ -5,9 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Thermometer, Scale, Beaker, ArrowRightLeft, Mountain } from "lucide-react";
+import { Thermometer, Scale, Beaker, ArrowRightLeft, Mountain, Clock } from "lucide-react";
 import AltitudeCalculator from "@/components/AltitudeCalculator";
 import PrintableReferenceCard from "@/components/PrintableReferenceCard";
+import PreservationTimeCalculator from "@/components/PreservationTimeCalculator";
 
 const Tools = () => {
   // Temperature conversion
@@ -227,8 +228,12 @@ const Tools = () => {
       {/* Calculators */}
       <section className="py-16">
         <div className="container-wide">
-          <Tabs defaultValue="temperature" className="w-full">
-            <TabsList className="grid w-full grid-cols-4 max-w-lg mx-auto mb-8">
+          <Tabs defaultValue="time" className="w-full">
+            <TabsList className="grid w-full grid-cols-5 max-w-2xl mx-auto mb-8">
+              <TabsTrigger value="time" className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                <span className="hidden sm:inline">Time</span>
+              </TabsTrigger>
               <TabsTrigger value="temperature" className="flex items-center gap-2">
                 <Thermometer className="w-4 h-4" />
                 <span className="hidden sm:inline">Temp</span>
@@ -246,6 +251,13 @@ const Tools = () => {
                 <span className="hidden sm:inline">Altitude</span>
               </TabsTrigger>
             </TabsList>
+
+            {/* Preservation Time Tab */}
+            <TabsContent value="time">
+              <div className="max-w-2xl mx-auto">
+                <PreservationTimeCalculator />
+              </div>
+            </TabsContent>
 
             {/* Temperature Tab */}
             <TabsContent value="temperature">
