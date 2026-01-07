@@ -246,19 +246,19 @@ const Canning = () => {
               featured
             />
             <AffiliateProductCard
-              name="Presto 23-Quart Pressure Canner"
-              description="Holds 7 quart jars (946 mL each) or 20 pint jars (473 mL each). Dial gauge for precise pressure control."
-              image={equipmentImage}
-              price="$129.99"
-              rating={5}
-              category="Pressure Canner"
+              name="21.5 Qt. Stainless Steel Canning Pot Beginner Starter Set"
+              description="Complete Canning Kit: includes a 21.5 quart stainless steel canning pot, a stainless steel rack, and canning tools set (jar funnel, canning tongs, spoon, lid lifter, jar wrench and jar lifter) (Jars not included)"
+              image="https://m.media-amazon.com/images/I/71fci-7T+CL._AC_SL1500_.jpg"
+              amazonLink="https://amzn.to/3Lyc6kM"
+              price="$65.99"
+              rating={4.6}
+              category="Water Bath"
             />
             <AffiliateProductCard
               name="Ball Mason Jars (8-Pack)"
               description="8-Pack of regular-mouth Pint(16 oz) jars (946 mL) with lids and bands. BPA-free lids for safe food preservation."
-              image="https://m.media-amazon.com/images/I/61y6vj0iEeL._SL1000_.jpg"
-              price="$26.00"
-              amazonLink="https://amzn.to/4qd6qMd"
+              image="https://m.media-amazon.com/images/I/41l0xDX4q1L._AC_.jpg"
+              price="$35.87"
               rating={4.7}
               category="Jars"
             />
