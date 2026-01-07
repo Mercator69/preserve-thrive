@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Users, Thermometer, CheckCircle, AlertTriangle } from "lucide-react";
 
 import canningImage from "@/assets/canning.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const AppleButter = () => {
   return (
@@ -203,10 +202,43 @@ const AppleButter = () => {
         <div className="container-wide">
           <h2 className="font-serif text-2xl font-bold mb-8">Recommended Equipment</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AffiliateProductCard name="Food Mill" description="Easily removes apple skins while creating smooth purée. Three disc sizes included." image={equipmentImage} price="$44.99" rating={5} category="Tools" featured />
-            <AffiliateProductCard name="7-Quart Slow Cooker" description="Perfect for hands-off apple butter. Programmable with warm setting." image={equipmentImage} price="$49.99" rating={5} category="Appliance" />
-            <AffiliateProductCard name="Half-Pint Jars (12-Pack)" description="Ideal size for spreads and butters. Wide-mouth for easy filling." image={equipmentImage} price="$10.99" rating={5} category="Jars" />
-            <AffiliateProductCard name="Apple Corer/Slicer" description="Cores and slices apples in one motion. Speeds up prep significantly." image={equipmentImage} price="$12.99" rating={4} category="Tools" />
+            <AffiliateProductCard 
+              name="OXO Good Grips Food Mill" 
+              description="3 grinding discs included. Easily removes apple skins while creating smooth purée." 
+              image="https://m.media-amazon.com/images/I/71RQ6M+hSML._AC_SL1500_.jpg" 
+              price="$59.99" 
+              rating={5} 
+              category="Tools" 
+              amazonLink="https://www.amazon.com/dp/B000I0MGKE"
+              featured 
+            />
+            <AffiliateProductCard 
+              name="Crock-Pot 7-Quart Slow Cooker" 
+              description="Perfect for hands-off apple butter. Programmable with keep warm setting." 
+              image="https://m.media-amazon.com/images/I/71KZuW5LKZL._AC_SL1500_.jpg" 
+              price="$49.99" 
+              rating={5} 
+              category="Appliance" 
+              amazonLink="https://www.amazon.com/dp/B003HF6PUO"
+            />
+            <AffiliateProductCard 
+              name="Mason Jar Lifestyle Half-Pint Jars" 
+              description="Ideal size for spreads and butters. Wide-mouth for easy filling." 
+              image="https://masonjarlifestyle.com/cdn/shop/products/half-pint-8-oz-mason-jar-with-wide-mouth-lid_1200x.jpg" 
+              price="$22.99" 
+              rating={5} 
+              category="Jars" 
+              amazonLink="https://masonjarlifestyle.com/products/half-pint-8-oz-wide-mouth-mason-jars"
+            />
+            <AffiliateProductCard 
+              name="Progressive Apple Slicer/Corer" 
+              description="Cores and slices apples in one motion. Speeds up prep significantly." 
+              image="https://m.media-amazon.com/images/I/71T4+r7RHFL._AC_SL1500_.jpg" 
+              price="$12.99" 
+              rating={4} 
+              category="Tools" 
+              amazonLink="https://www.amazon.com/dp/B0000DDVN6"
+            />
           </div>
         </div>
       </section>

@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Snowflake, Timer, ThermometerSnowflake } from "lucide-react";
 
 import freezingImage from "@/assets/freezing.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const Freezing = () => {
   return (
@@ -333,37 +332,41 @@ const Freezing = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AffiliateProductCard
-              name="FoodSaver Vacuum Sealer"
-              description="Removes air to prevent freezer burn. Keeps food fresh up to 5x longer than ordinary storage."
-              image={equipmentImage}
-              price="$99.99"
-              rating={5}
-              category="Vacuum Sealer"
-              featured
-            />
-            <AffiliateProductCard
-              name="Silicone Freezer Bags"
-              description="Reusable, eco-friendly alternative to plastic bags. Dishwasher safe and airtight seal."
-              image={equipmentImage}
-              price="$24.99"
-              rating={4}
-              category="Containers"
-            />
-            <AffiliateProductCard
-              name="Glass Freezer Containers"
-              description="BPA-free glass with leak-proof lids. Freezer-to-oven safe for easy meal prep."
-              image={equipmentImage}
-              price="$29.99"
-              rating={4}
-              category="Containers"
-            />
-            <AffiliateProductCard
-              name="Harvest Right Home Freeze Dryer"
-              description="Medium-size home freeze dryer. Preserves 7-10 lbs per batch for long-term storage."
-              image={equipmentImage}
+              name="Harvest Right Medium Home Freeze Dryer"
+              description="Freeze dry 7-10 lbs per batch. Preserves food for 25+ years with 97% nutrition retention. Includes vacuum pump and trays."
+              image="https://harvestright.com/wp-content/uploads/2023/03/HR-Standard-Size-White-Left-Facing-v2.png"
               price="$2,895.00"
               rating={5}
               category="Freeze Dryer"
+              amazonLink="https://harvestright.com/product/medium-freeze-dryer/"
+              featured
+            />
+            <AffiliateProductCard
+              name="NESCO VS-12 Deluxe Vacuum Sealer"
+              description="One-touch operation with automatic bag detection. Includes starter kit with bags and rolls. Pulse vacuum for delicate foods."
+              image="https://nesco.com/cdn/shop/products/VS-12_Main_1200x.jpg"
+              price="$99.99"
+              rating={5}
+              category="Vacuum Sealer"
+              amazonLink="https://www.amazon.com/dp/B000HKFMMS"
+            />
+            <AffiliateProductCard
+              name="OutOfAir Vacuum Sealer Bags (100 Count)"
+              description="11x16 inch commercial grade bags. BPA-free, works with all clamp-style vacuum sealers. Embossed for better air removal."
+              image="https://m.media-amazon.com/images/I/81sV-M8DXAL._AC_SL1500_.jpg"
+              price="$29.99"
+              rating={5}
+              category="Vacuum Bags"
+              amazonLink="https://www.amazon.com/dp/B07B8K6LQX"
+            />
+            <AffiliateProductCard
+              name="KitchenBoss Vacuum Sealer G320"
+              description="Compact design with dry/moist modes. Built-in cutter and bag storage. Includes starter bags and roll."
+              image="https://m.media-amazon.com/images/I/71PqHqJOjsL._AC_SL1500_.jpg"
+              price="$69.99"
+              rating={4}
+              category="Vacuum Sealer"
+              amazonLink="https://www.amazon.com/dp/B07FM3J9NL"
             />
           </div>
         </div>

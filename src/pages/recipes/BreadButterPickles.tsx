@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Users, Thermometer, CheckCircle, AlertTriangle } from "lucide-react";
 
 import canningImage from "@/assets/canning.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const BreadButterPickles = () => {
   return (
@@ -185,10 +184,43 @@ const BreadButterPickles = () => {
         <div className="container-wide">
           <h2 className="font-serif text-2xl font-bold mb-8">Recommended Equipment</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AffiliateProductCard name="Mandoline Slicer" description="Adjustable blade for uniform cucumber slices. Safety guard included." image={equipmentImage} price="$34.99" rating={5} category="Tools" featured />
-            <AffiliateProductCard name="Ball Pint Jars (12-Pack)" description="Standard pint jars perfect for pickles. Includes lids and bands." image={equipmentImage} price="$14.99" rating={5} category="Jars" />
-            <AffiliateProductCard name="Pickling Salt (4 lb)" description="Pure salt without additives that can cloud brine. Essential for clear pickles." image={equipmentImage} price="$6.99" rating={4} category="Ingredients" />
-            <AffiliateProductCard name="Wide-Mouth Funnel" description="Fits pint and quart jars. Stainless steel for easy cleaning." image={equipmentImage} price="$7.99" rating={4} category="Tools" />
+            <AffiliateProductCard 
+              name="OXO V-Blade Mandoline Slicer" 
+              description="Adjustable blade for uniform cucumber slices. Non-slip base and hand guard." 
+              image="https://m.media-amazon.com/images/I/71dn7nz7LCL._AC_SL1500_.jpg" 
+              price="$39.99" 
+              rating={5} 
+              category="Tools" 
+              amazonLink="https://www.amazon.com/dp/B00004OCLE"
+              featured 
+            />
+            <AffiliateProductCard 
+              name="Mason Jar Lifestyle Pint Jars (12-Pack)" 
+              description="Standard pint jars perfect for pickles. Includes stainless steel lids." 
+              image="https://masonjarlifestyle.com/cdn/shop/products/pint-16-oz-mason-jar-with-wide-mouth-lid_1200x.jpg" 
+              price="$29.99" 
+              rating={5} 
+              category="Jars" 
+              amazonLink="https://masonjarlifestyle.com/products/pint-16-oz-wide-mouth-mason-jars"
+            />
+            <AffiliateProductCard 
+              name="Morton Canning & Pickling Salt" 
+              description="Pure salt without additives that can cloud brine. 4 lb container." 
+              image="https://m.media-amazon.com/images/I/71aKCf9lEoL._SL1500_.jpg" 
+              price="$6.99" 
+              rating={4} 
+              category="Ingredients" 
+              amazonLink="https://www.amazon.com/dp/B004RD6UFE"
+            />
+            <AffiliateProductCard 
+              name="Norpro Wide-Mouth Funnel" 
+              description="Fits pint and quart jars. Stainless steel for easy cleaning." 
+              image="https://m.media-amazon.com/images/I/71iwPBYbLpL._AC_SL1500_.jpg" 
+              price="$8.99" 
+              rating={4} 
+              category="Tools" 
+              amazonLink="https://www.amazon.com/dp/B001ULC7WW"
+            />
           </div>
         </div>
       </section>

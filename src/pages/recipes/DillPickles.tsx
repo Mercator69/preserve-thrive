@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, Users, Thermometer, CheckCircle, AlertTriangle } from "lucide-react";
 
 import canningImage from "@/assets/canning.jpg";
-import equipmentImage from "@/assets/equipment.jpg";
 
 const DillPickles = () => {
   return (
@@ -188,10 +187,43 @@ const DillPickles = () => {
         <div className="container-wide">
           <h2 className="font-serif text-2xl font-bold mb-8">Recommended Equipment</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AffiliateProductCard name="Wide-Mouth Quart Jars (12-Pack)" description="Essential for whole dill pickles. Wide mouth makes packing easy." image={equipmentImage} price="$17.99" rating={5} category="Jars" featured />
-            <AffiliateProductCard name="Pickle Crisp Granules" description="Calcium chloride keeps pickles crunchy. 1/8 tsp per quart jar." image={equipmentImage} price="$7.99" rating={5} category="Ingredients" />
-            <AffiliateProductCard name="Pickling Salt (4 lb)" description="Pure salt without anti-caking agents or iodine that clouds brine." image={equipmentImage} price="$6.99" rating={4} category="Ingredients" />
-            <AffiliateProductCard name="Jar Packer Tool" description="Helps pack cucumbers tightly without bruising. Doubles as bubble remover." image={equipmentImage} price="$5.99" rating={4} category="Tools" />
+            <AffiliateProductCard 
+              name="MasonJars.com Wide Mouth Quart Jars" 
+              description="12-pack of wide mouth quart jars. Essential for whole dill pickles." 
+              image="https://m.media-amazon.com/images/I/81d+ZeLMhVL._AC_SL1500_.jpg" 
+              price="$18.99" 
+              rating={5} 
+              category="Jars" 
+              amazonLink="https://www.amazon.com/dp/B082THSTD1"
+              featured 
+            />
+            <AffiliateProductCard 
+              name="Mason Jar Lifestyle Fermentation Kit" 
+              description="Fermentation lids and weights for mason jars. Perfect for pickles." 
+              image="https://masonjarlifestyle.com/cdn/shop/products/fermentation-lid-kit-wide-mouth_1200x.jpg" 
+              price="$24.99" 
+              rating={5} 
+              category="Fermentation" 
+              amazonLink="https://masonjarlifestyle.com/products/fermentation-lid-kit-wide-mouth"
+            />
+            <AffiliateProductCard 
+              name="Ball Pickle Crisp Granules" 
+              description="Calcium chloride keeps pickles crunchy. 1/8 tsp per quart jar." 
+              image="https://m.media-amazon.com/images/I/71wKA8FKhRL._SL1500_.jpg" 
+              price="$7.99" 
+              rating={5} 
+              category="Ingredients" 
+              amazonLink="https://www.amazon.com/dp/B0000BYN0L"
+            />
+            <AffiliateProductCard 
+              name="Morton Canning & Pickling Salt" 
+              description="4 lb pure salt without anti-caking agents. Won't cloud brine." 
+              image="https://m.media-amazon.com/images/I/71aKCf9lEoL._SL1500_.jpg" 
+              price="$6.99" 
+              rating={4} 
+              category="Ingredients" 
+              amazonLink="https://www.amazon.com/dp/B004RD6UFE"
+            />
           </div>
         </div>
       </section>
