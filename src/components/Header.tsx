@@ -11,6 +11,7 @@ const navigation = [
   { name: "Fermenting", href: "/fermenting" },
   { name: "Curing & Smoking", href: "/curing" },
   { name: "Recipes", href: "/recipes" },
+  { name: "Tools", href: "/tools" },
   { name: "Equipment", href: "/equipment" },
 ];
 
