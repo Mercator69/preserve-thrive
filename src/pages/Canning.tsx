@@ -256,8 +256,9 @@ const Canning = () => {
             <AffiliateProductCard
               name="Ball Mason Jars (8-Pack)"
               description="8-Pack of regular-mouth Pint(16 oz) jars (946 mL) with lids and bands. BPA-free lids for safe food preservation."
-              image="https://m.media-amazon.com/images/I/41l0xDX4q1L._AC_.jpg"
-              price="$35.87"
+              image="https://m.media-amazon.com/images/I/61y6vj0iEeL._SL1000_.jpg"
+              price="$26.00"
+              amazonLink="https://amzn.to/4qd6qMd"
               rating={4.7}
               category="Jars"
             />
