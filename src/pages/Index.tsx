@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { MethodCard } from "@/components/MethodCard";
 import { InfoCard } from "@/components/InfoCard";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { PreservationSearch } from "@/components/PreservationSearch";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Shield, Beaker, Clock } from "lucide-react";
@@ -104,6 +105,9 @@ const Index = () => {
               extensions. From canning to fermentation, we'll help you store your food safely 
               and enjoy it year-round.
             </p>
+            <div className="pt-6">
+              <PreservationSearch />
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button asChild variant="hero" size="xl">
                 <Link to="/canning">
