@@ -33,7 +33,7 @@ export function AffiliateProductCard({
       )}
       <div className="aspect-square overflow-hidden bg-muted">
         <img
-          src={image}
+          src="https://b4333452.smushcdn.com/4333452/wp-content/uploads/2019/05/NPC-9-New-Panel-1-scaled.jpg?lossy=2&strip=1&webp=1"
           alt={name}
           className="w-full h-full object-cover"
         />
@@ -44,22 +44,19 @@ export function AffiliateProductCard({
         </Badge>
         <h3 className="font-serif font-semibold line-clamp-2">{name}</h3>
         <p className="text-sm text-muted-foreground line-clamp-2">{description}</p>
-        
+
         <div className="flex items-center gap-1">
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star
-              key={i}
-              className={`w-4 h-4 ${i < rating ? "text-accent fill-accent" : "text-muted"}`}
-            />
+            <Star key={i} className={`w-4 h-4 ${i < rating ? "text-accent fill-accent" : "text-muted"}`} />
           ))}
           <span className="text-sm text-muted-foreground ml-1">({rating}/5)</span>
         </div>
-        
+
         <div className="flex items-center justify-between pt-2">
           <span className="font-semibold text-lg text-primary">{price}</span>
           <Button asChild size="sm" variant="harvest">
-            <a href={amazonLink} target="_blank" rel="noopener noreferrer">
-              View on Amazon
+            <a href="https://www.nesco.com/product/9-qt-smart-canner-cooker" target="_blank" rel="noopener noreferrer">
+              View on Nesco
               <ExternalLink className="w-3 h-3 ml-1" />
             </a>
           </Button>
