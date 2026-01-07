@@ -239,6 +239,7 @@ const Canning = () => {
               name="9.5 Qt. Digital Smart Canner NPC-9"
               description="9.5-quart (9 L) capacity, Designed for Pressure Canning, Pressure Cooking, Steam Cooking and Slow Cooking"
               image="https://b4333452.smushcdn.com/4333452/wp-content/uploads/2019/05/NPC-9-New-Panel-1-scaled.jpg?lossy=2&strip=1&webp=1"
+              amazonLink="https://www.nesco.com/product/9-qt-smart-canner-cooker/"
               price="$169.99"
               rating={3.2}
               category="Pressure Canner"
