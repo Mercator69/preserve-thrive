@@ -33,7 +33,7 @@ export function AffiliateProductCard({
       )}
       <div className="aspect-square overflow-hidden bg-muted">
         <img
-          src="https://b4333452.smushcdn.com/4333452/wp-content/uploads/2019/05/NPC-9-New-Panel-1-scaled.jpg?lossy=2&strip=1&webp=1"
+          src={image}
           alt={name}
           className="w-full h-full object-cover"
         />
@@ -55,8 +55,8 @@ export function AffiliateProductCard({
         <div className="flex items-center justify-between pt-2">
           <span className="font-semibold text-lg text-primary">{price}</span>
           <Button asChild size="sm" variant="harvest">
-            <a href="https://www.nesco.com/product/9-qt-smart-canner-cooker" target="_blank" rel="noopener noreferrer">
-              View on Nesco
+            <a href={amazonLink} target="_blank" rel="noopener noreferrer">
+              View Product
               <ExternalLink className="w-3 h-3 ml-1" />
             </a>
           </Button>
