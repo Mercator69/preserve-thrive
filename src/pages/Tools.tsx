@@ -5,7 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Thermometer, Scale, Beaker, ArrowRightLeft } from "lucide-react";
+import { Thermometer, Scale, Beaker, ArrowRightLeft, Mountain } from "lucide-react";
+import AltitudeCalculator from "@/components/AltitudeCalculator";
+import PrintableReferenceCard from "@/components/PrintableReferenceCard";
 
 const Tools = () => {
   // Temperature conversion
@@ -226,10 +228,10 @@ const Tools = () => {
       <section className="py-16">
         <div className="container-wide">
           <Tabs defaultValue="temperature" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-8">
+            <TabsList className="grid w-full grid-cols-4 max-w-lg mx-auto mb-8">
               <TabsTrigger value="temperature" className="flex items-center gap-2">
                 <Thermometer className="w-4 h-4" />
-                <span className="hidden sm:inline">Temperature</span>
+                <span className="hidden sm:inline">Temp</span>
               </TabsTrigger>
               <TabsTrigger value="weight" className="flex items-center gap-2">
                 <Scale className="w-4 h-4" />
@@ -238,6 +240,10 @@ const Tools = () => {
               <TabsTrigger value="volume" className="flex items-center gap-2">
                 <Beaker className="w-4 h-4" />
                 <span className="hidden sm:inline">Volume</span>
+              </TabsTrigger>
+              <TabsTrigger value="altitude" className="flex items-center gap-2">
+                <Mountain className="w-4 h-4" />
+                <span className="hidden sm:inline">Altitude</span>
               </TabsTrigger>
             </TabsList>
 
@@ -590,7 +596,21 @@ const Tools = () => {
                 </Card>
               </div>
             </TabsContent>
+
+            {/* Altitude Tab */}
+            <TabsContent value="altitude">
+              <div className="max-w-2xl mx-auto">
+                <AltitudeCalculator />
+              </div>
+            </TabsContent>
           </Tabs>
+        </div>
+      </section>
+
+      {/* Printable Reference Card */}
+      <section className="py-8">
+        <div className="container-wide max-w-2xl">
+          <PrintableReferenceCard />
         </div>
       </section>
 
