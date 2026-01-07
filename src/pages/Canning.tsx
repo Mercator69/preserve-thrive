@@ -236,12 +236,12 @@ const Canning = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AffiliateProductCard
-              name="Ball Enamel Water Bath Canner"
-              description="21-quart (20 L) capacity, includes jar rack. Perfect for beginners and high-acid foods."
-              image={equipmentImage}
-              price="$39.99"
-              rating={5}
-              category="Water Bath"
+              name="9.5 Qt. Digital Smart Canner NPC-9"
+              description="9.5-quart (9 L) capacity, Designed for Pressure Canning, Pressure Cooking, Steam Cooking and Slow Cooking"
+              image="https://b4333452.smushcdn.com/4333452/wp-content/uploads/2019/05/NPC-9-New-Panel-1-scaled.jpg?lossy=2&strip=1&webp=1"
+              price="$169.99"
+              rating={3.2}
+              category="Pressure Canner"
               featured
             />
             <AffiliateProductCard
@@ -253,11 +253,11 @@ const Canning = () => {
               category="Pressure Canner"
             />
             <AffiliateProductCard
-              name="Ball Regular Mount Pint (16 oz.) Mason Jars (8-Pack)"
-              description="Regular-mouth pint jars (454 mL) with lids and bands. BPA-free lids for safe food preservation."
-              image="https://m.media-amazon.com/images/I/41l0xDX4q1L._AC_.jpg"
-              price="$35.87"
-              rating={4.7}
+              name="Ball Mason Jars (12-Pack)"
+              description="Wide-mouth quart jars (946 mL) with lids and bands. BPA-free lids for safe food preservation."
+              image={equipmentImage}
+              price="$17.99"
+              rating={4}
               category="Jars"
             />
             <AffiliateProductCard
