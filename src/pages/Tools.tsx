@@ -5,10 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Thermometer, Scale, Beaker, ArrowRightLeft, Mountain, Clock } from "lucide-react";
+import { Thermometer, Scale, Beaker, ArrowRightLeft, Mountain, Clock, BarChart3 } from "lucide-react";
 import AltitudeCalculator from "@/components/AltitudeCalculator";
 import PrintableReferenceCard from "@/components/PrintableReferenceCard";
 import PreservationTimeCalculator from "@/components/PreservationTimeCalculator";
+import ShelfLifeChart from "@/components/ShelfLifeChart";
 
 const Tools = () => {
   // Temperature conversion
@@ -229,10 +230,14 @@ const Tools = () => {
       <section className="py-16">
         <div className="container-wide">
           <Tabs defaultValue="time" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 max-w-2xl mx-auto mb-8">
+            <TabsList className="grid w-full grid-cols-6 max-w-3xl mx-auto mb-8">
               <TabsTrigger value="time" className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
                 <span className="hidden sm:inline">Time</span>
+              </TabsTrigger>
+              <TabsTrigger value="shelflife" className="flex items-center gap-2">
+                <BarChart3 className="w-4 h-4" />
+                <span className="hidden sm:inline">Shelf Life</span>
               </TabsTrigger>
               <TabsTrigger value="temperature" className="flex items-center gap-2">
                 <Thermometer className="w-4 h-4" />
@@ -256,6 +261,13 @@ const Tools = () => {
             <TabsContent value="time">
               <div className="max-w-2xl mx-auto">
                 <PreservationTimeCalculator />
+              </div>
+            </TabsContent>
+
+            {/* Shelf Life Tab */}
+            <TabsContent value="shelflife">
+              <div className="max-w-6xl mx-auto">
+                <ShelfLifeChart />
               </div>
             </TabsContent>
 
