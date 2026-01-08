@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Download, Search, BarChart3 } from "lucide-react";
+import { Download, Search, BarChart3, ExternalLink } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
 
 interface ShelfLifeData {
@@ -17,57 +17,68 @@ interface ShelfLifeData {
   coldStorage?: string;
   fermenting?: string;
   curing?: string;
+  sources: string[];
 }
+
+// Source references
+const sources = {
+  USDA: { name: "USDA FoodKeeper App", url: "https://www.foodsafety.gov/keep-food-safe/foodkeeper-app" },
+  NCHFP: { name: "National Center for Home Food Preservation", url: "https://nchfp.uga.edu/" },
+  FSIS: { name: "USDA Food Safety and Inspection Service", url: "https://www.fsis.usda.gov/food-safety" },
+  FDA: { name: "U.S. Food and Drug Administration", url: "https://www.fda.gov/food" },
+  EXTENSION: { name: "Cooperative Extension Service", url: "https://extension.org/" },
+  BALL: { name: "Ball Blue Book Guide to Preserving", url: "https://www.freshpreserving.com/" },
+};
 
 const shelfLifeDatabase: ShelfLifeData[] = [
   // Fruits
-  { name: "Apples", category: "Fruits", canning: "1-2 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "2-6 months" },
-  { name: "Peaches", category: "Fruits", canning: "1-2 years", freezing: "8-12 months", dehydrating: "6-12 months" },
-  { name: "Strawberries", category: "Fruits", canning: "1 year", freezing: "8-12 months", dehydrating: "6-12 months" },
-  { name: "Blueberries", category: "Fruits", canning: "1 year", freezing: "10-12 months", dehydrating: "6-12 months" },
-  { name: "Cherries", category: "Fruits", canning: "1 year", freezing: "8-12 months", dehydrating: "6-12 months" },
-  { name: "Grapes", category: "Fruits", canning: "1 year", freezing: "10-12 months", dehydrating: "6-12 months" },
-  { name: "Pears", category: "Fruits", canning: "1-2 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "1-3 months" },
-  { name: "Plums", category: "Fruits", canning: "1 year", freezing: "8-12 months", dehydrating: "6-12 months" },
+  { name: "Apples", category: "Fruits", canning: "1-2 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "2-6 months", sources: ["NCHFP", "USDA", "EXTENSION"] },
+  { name: "Peaches", category: "Fruits", canning: "1-2 years", freezing: "8-12 months", dehydrating: "6-12 months", sources: ["NCHFP", "BALL", "USDA"] },
+  { name: "Strawberries", category: "Fruits", canning: "1 year", freezing: "8-12 months", dehydrating: "6-12 months", sources: ["NCHFP", "USDA", "EXTENSION"] },
+  { name: "Blueberries", category: "Fruits", canning: "1 year", freezing: "10-12 months", dehydrating: "6-12 months", sources: ["NCHFP", "USDA"] },
+  { name: "Cherries", category: "Fruits", canning: "1 year", freezing: "8-12 months", dehydrating: "6-12 months", sources: ["NCHFP", "BALL", "USDA"] },
+  { name: "Grapes", category: "Fruits", canning: "1 year", freezing: "10-12 months", dehydrating: "6-12 months", sources: ["NCHFP", "USDA"] },
+  { name: "Pears", category: "Fruits", canning: "1-2 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "1-3 months", sources: ["NCHFP", "USDA", "EXTENSION"] },
+  { name: "Plums", category: "Fruits", canning: "1 year", freezing: "8-12 months", dehydrating: "6-12 months", sources: ["NCHFP", "BALL"] },
   // Vegetables
-  { name: "Tomatoes", category: "Vegetables", canning: "12-18 months", freezing: "8-12 months", dehydrating: "6-12 months" },
-  { name: "Green Beans", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "6-12 months", fermenting: "4-6 months" },
-  { name: "Corn", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "1-2 years" },
-  { name: "Carrots", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "4-6 months", fermenting: "4-6 months" },
-  { name: "Potatoes", category: "Vegetables", canning: "1-2 years", freezing: "10-12 months", dehydrating: "1-2 years", coldStorage: "4-6 months" },
-  { name: "Beets", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "3-5 months", fermenting: "4-6 months" },
-  { name: "Cucumbers", category: "Vegetables", canning: "1-2 years", freezing: "3-6 months", fermenting: "4-6 months" },
-  { name: "Peppers", category: "Vegetables", canning: "1-2 years", freezing: "8-12 months", dehydrating: "1-2 years", fermenting: "4-6 months" },
-  { name: "Onions", category: "Vegetables", canning: "1 year", freezing: "8-12 months", dehydrating: "1-2 years", coldStorage: "3-6 months" },
-  { name: "Garlic", category: "Vegetables", dehydrating: "1-2 years", coldStorage: "6-12 months", fermenting: "1 year" },
-  { name: "Cabbage", category: "Vegetables", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "3-4 months", fermenting: "4-6 months" },
-  { name: "Squash", category: "Vegetables", canning: "1-2 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "3-6 months" },
-  { name: "Pumpkin", category: "Vegetables", canning: "1-2 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "2-3 months" },
-  { name: "Zucchini", category: "Vegetables", canning: "1 year", freezing: "8-12 months", dehydrating: "6-12 months" },
-  { name: "Asparagus", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", fermenting: "4-6 months" },
-  { name: "Peas", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "1-2 years" },
-  { name: "Spinach", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "6-12 months" },
+  { name: "Tomatoes", category: "Vegetables", canning: "12-18 months", freezing: "8-12 months", dehydrating: "6-12 months", sources: ["NCHFP", "BALL", "USDA"] },
+  { name: "Green Beans", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "6-12 months", fermenting: "4-6 months", sources: ["NCHFP", "USDA", "EXTENSION"] },
+  { name: "Corn", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "1-2 years", sources: ["NCHFP", "BALL", "USDA"] },
+  { name: "Carrots", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "4-6 months", fermenting: "4-6 months", sources: ["NCHFP", "USDA", "EXTENSION"] },
+  { name: "Potatoes", category: "Vegetables", canning: "1-2 years", freezing: "10-12 months", dehydrating: "1-2 years", coldStorage: "4-6 months", sources: ["NCHFP", "USDA", "EXTENSION"] },
+  { name: "Beets", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "3-5 months", fermenting: "4-6 months", sources: ["NCHFP", "BALL", "EXTENSION"] },
+  { name: "Cucumbers", category: "Vegetables", canning: "1-2 years", freezing: "3-6 months", fermenting: "4-6 months", sources: ["NCHFP", "BALL", "USDA"] },
+  { name: "Peppers", category: "Vegetables", canning: "1-2 years", freezing: "8-12 months", dehydrating: "1-2 years", fermenting: "4-6 months", sources: ["NCHFP", "USDA", "EXTENSION"] },
+  { name: "Onions", category: "Vegetables", canning: "1 year", freezing: "8-12 months", dehydrating: "1-2 years", coldStorage: "3-6 months", sources: ["NCHFP", "USDA", "EXTENSION"] },
+  { name: "Garlic", category: "Vegetables", dehydrating: "1-2 years", coldStorage: "6-12 months", fermenting: "1 year", sources: ["NCHFP", "EXTENSION", "USDA"] },
+  { name: "Cabbage", category: "Vegetables", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "3-4 months", fermenting: "4-6 months", sources: ["NCHFP", "USDA", "EXTENSION"] },
+  { name: "Squash", category: "Vegetables", canning: "1-2 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "3-6 months", sources: ["NCHFP", "BALL", "EXTENSION"] },
+  { name: "Pumpkin", category: "Vegetables", canning: "1-2 years", freezing: "8-12 months", dehydrating: "6-12 months", coldStorage: "2-3 months", sources: ["NCHFP", "BALL", "USDA"] },
+  { name: "Zucchini", category: "Vegetables", canning: "1 year", freezing: "8-12 months", dehydrating: "6-12 months", sources: ["NCHFP", "USDA"] },
+  { name: "Asparagus", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", fermenting: "4-6 months", sources: ["NCHFP", "BALL", "USDA"] },
+  { name: "Peas", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "1-2 years", sources: ["NCHFP", "USDA", "EXTENSION"] },
+  { name: "Spinach", category: "Vegetables", canning: "2-3 years", freezing: "8-12 months", dehydrating: "6-12 months", sources: ["NCHFP", "USDA"] },
   // Meats
-  { name: "Beef", category: "Meats", canning: "2-3 years", freezing: "6-12 months", dehydrating: "1-2 months", curing: "2-3 months" },
-  { name: "Pork", category: "Meats", canning: "2-3 years", freezing: "4-6 months", curing: "2-3 months" },
-  { name: "Chicken", category: "Meats", canning: "2-3 years", freezing: "9-12 months", dehydrating: "1-2 months" },
-  { name: "Turkey", category: "Meats", canning: "2-3 years", freezing: "6-9 months", curing: "2-3 months" },
-  { name: "Venison", category: "Meats", canning: "2-3 years", freezing: "9-12 months", dehydrating: "1-2 months", curing: "2-3 months" },
-  { name: "Fish", category: "Meats", canning: "2-3 years", freezing: "3-6 months", dehydrating: "1-2 months", curing: "2-3 months" },
+  { name: "Beef", category: "Meats", canning: "2-3 years", freezing: "6-12 months", dehydrating: "1-2 months", curing: "2-3 months", sources: ["FSIS", "NCHFP", "USDA"] },
+  { name: "Pork", category: "Meats", canning: "2-3 years", freezing: "4-6 months", curing: "2-3 months", sources: ["FSIS", "NCHFP", "USDA"] },
+  { name: "Chicken", category: "Meats", canning: "2-3 years", freezing: "9-12 months", dehydrating: "1-2 months", sources: ["FSIS", "NCHFP", "USDA"] },
+  { name: "Turkey", category: "Meats", canning: "2-3 years", freezing: "6-9 months", curing: "2-3 months", sources: ["FSIS", "USDA"] },
+  { name: "Venison", category: "Meats", canning: "2-3 years", freezing: "9-12 months", dehydrating: "1-2 months", curing: "2-3 months", sources: ["FSIS", "NCHFP", "EXTENSION"] },
+  { name: "Fish", category: "Meats", canning: "2-3 years", freezing: "3-6 months", dehydrating: "1-2 months", curing: "2-3 months", sources: ["FSIS", "FDA", "NCHFP"] },
   // Dairy & Eggs
-  { name: "Eggs", category: "Dairy & Eggs", freezing: "12 months", dehydrating: "5-10 years", coldStorage: "12+ months" },
-  { name: "Milk", category: "Dairy & Eggs", freezing: "3-6 months", fermenting: "1-3 weeks" },
-  { name: "Cheese", category: "Dairy & Eggs", freezing: "6-9 months", coldStorage: "3-6 months" },
+  { name: "Eggs", category: "Dairy & Eggs", freezing: "12 months", dehydrating: "5-10 years", coldStorage: "12+ months", sources: ["USDA", "FSIS", "EXTENSION"] },
+  { name: "Milk", category: "Dairy & Eggs", freezing: "3-6 months", fermenting: "1-3 weeks", sources: ["USDA", "FDA"] },
+  { name: "Cheese", category: "Dairy & Eggs", freezing: "6-9 months", coldStorage: "3-6 months", sources: ["USDA", "FDA"] },
   // Herbs
-  { name: "Herbs (general)", category: "Herbs", freezing: "6-12 months", dehydrating: "1-3 years" },
-  { name: "Basil", category: "Herbs", freezing: "6-12 months", dehydrating: "1-2 years" },
+  { name: "Herbs (general)", category: "Herbs", freezing: "6-12 months", dehydrating: "1-3 years", sources: ["NCHFP", "EXTENSION", "USDA"] },
+  { name: "Basil", category: "Herbs", freezing: "6-12 months", dehydrating: "1-2 years", sources: ["NCHFP", "EXTENSION"] },
   // Misc
-  { name: "Mushrooms", category: "Misc", canning: "1 year", freezing: "8-12 months", dehydrating: "6-12 months" },
-  { name: "Salsa", category: "Misc", canning: "12-18 months", freezing: "3-4 months", fermenting: "2-3 months" },
-  { name: "Jam", category: "Misc", canning: "1-2 years", freezing: "6-12 months" },
-  { name: "Pickles", category: "Misc", canning: "1-2 years", fermenting: "4-6 months" },
-  { name: "Broth", category: "Misc", canning: "2-3 years", freezing: "4-6 months" },
-  { name: "Soup", category: "Misc", canning: "2-3 years", freezing: "2-3 months" },
+  { name: "Mushrooms", category: "Misc", canning: "1 year", freezing: "8-12 months", dehydrating: "6-12 months", sources: ["NCHFP", "USDA"] },
+  { name: "Salsa", category: "Misc", canning: "12-18 months", freezing: "3-4 months", fermenting: "2-3 months", sources: ["NCHFP", "BALL", "USDA"] },
+  { name: "Jam", category: "Misc", canning: "1-2 years", freezing: "6-12 months", sources: ["NCHFP", "BALL", "USDA"] },
+  { name: "Pickles", category: "Misc", canning: "1-2 years", fermenting: "4-6 months", sources: ["NCHFP", "BALL", "EXTENSION"] },
+  { name: "Broth", category: "Misc", canning: "2-3 years", freezing: "4-6 months", sources: ["NCHFP", "USDA"] },
+  { name: "Soup", category: "Misc", canning: "2-3 years", freezing: "2-3 months", sources: ["NCHFP", "USDA", "FSIS"] },
 ];
 
 const categoryColors: Record<string, string> = {
@@ -233,6 +244,22 @@ export default function ShelfLifeChart() {
       text-align: center;
     }
     .na { color: #ccc; font-style: italic; }
+    .sources { font-size: 11px; color: #777; }
+    .sources-section {
+      background: #f0f4f0;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+    .sources-section h3 {
+      color: #2d5a27;
+      margin-bottom: 15px;
+    }
+    .source-list p {
+      margin: 8px 0;
+      font-size: 12px;
+      color: #555;
+    }
     .footer {
       margin-top: 40px;
       padding-top: 20px;
@@ -277,13 +304,14 @@ export default function ShelfLifeChart() {
           <div class="category-header">${category}</div>
           <table>
             <tr>
-              <th style="width: 18%;">Food</th>
-              <th style="width: 14%;">Canning</th>
-              <th style="width: 14%;">Freezing</th>
-              <th style="width: 14%;">Dehydrating</th>
-              <th style="width: 14%;">Cold Storage</th>
-              <th style="width: 13%;">Fermenting</th>
-              <th style="width: 13%;">Curing</th>
+              <th style="width: 15%;">Food</th>
+              <th style="width: 12%;">Canning</th>
+              <th style="width: 12%;">Freezing</th>
+              <th style="width: 12%;">Dehydrating</th>
+              <th style="width: 12%;">Cold Storage</th>
+              <th style="width: 10%;">Fermenting</th>
+              <th style="width: 10%;">Curing</th>
+              <th style="width: 17%;">Sources</th>
             </tr>
             ${items.map(item => `
               <tr>
@@ -294,12 +322,25 @@ export default function ShelfLifeChart() {
                 <td class="shelf-life">${item.coldStorage || '<span class="na">—</span>'}</td>
                 <td class="shelf-life">${item.fermenting || '<span class="na">—</span>'}</td>
                 <td class="shelf-life">${item.curing || '<span class="na">—</span>'}</td>
+                <td class="sources">${item.sources.join(', ')}</td>
               </tr>
             `).join('')}
           </table>
         </div>
       `;
     }).join('')}
+
+    <div class="sources-section">
+      <h3>📚 Sources & References</h3>
+      <div class="source-list">
+        <p><strong>USDA</strong> - USDA FoodKeeper App (foodsafety.gov/keep-food-safe/foodkeeper-app)</p>
+        <p><strong>NCHFP</strong> - National Center for Home Food Preservation (nchfp.uga.edu)</p>
+        <p><strong>FSIS</strong> - USDA Food Safety and Inspection Service (fsis.usda.gov)</p>
+        <p><strong>FDA</strong> - U.S. Food and Drug Administration (fda.gov/food)</p>
+        <p><strong>EXTENSION</strong> - Cooperative Extension Service (extension.org)</p>
+        <p><strong>BALL</strong> - Ball Blue Book Guide to Preserving (freshpreserving.com)</p>
+      </div>
+    </div>
 
     <div class="tips">
       <h3>💡 Storage Tips</h3>
@@ -444,6 +485,7 @@ export default function ShelfLifeChart() {
                   <TableHead className="text-center">Cold Storage</TableHead>
                   <TableHead className="text-center">Fermenting</TableHead>
                   <TableHead className="text-center">Curing</TableHead>
+                  <TableHead>Sources</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -459,6 +501,19 @@ export default function ShelfLifeChart() {
                     <TableCell className="text-center text-sm">{item.coldStorage || "—"}</TableCell>
                     <TableCell className="text-center text-sm">{item.fermenting || "—"}</TableCell>
                     <TableCell className="text-center text-sm">{item.curing || "—"}</TableCell>
+                    <TableCell className="text-xs text-muted-foreground">
+                      {item.sources.map((src, i) => (
+                        <a 
+                          key={src} 
+                          href={sources[src as keyof typeof sources]?.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-primary hover:underline"
+                        >
+                          {src}{i < item.sources.length - 1 ? ", " : ""}
+                        </a>
+                      ))}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
