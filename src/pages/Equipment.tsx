@@ -39,6 +39,12 @@ const equipmentCategories = [
     image: fermentingImage,
     href: "/equipment/fermentation",
   },
+  {
+    title: "Supplies",
+    description: "Mason jars, lids, bags, labels, and essential accessories for all preservation methods.",
+    image: equipmentImage,
+    href: "/equipment/supplies",
+  },
 ];
 
 const Equipment = () => {
